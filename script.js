@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const rightButton = document.getElementById("right-button");
   const hamburger = document.getElementById("hamburger-menu");
   const navMenu = document.querySelector(".horizontal-menu");
+  const mobilePageTitle = document.getElementById("mobile-current-page-title");
 
   let currentPageIndex = 0;
   const pageCount = pages.length;
@@ -27,8 +28,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     const completionPercentage = ((currentPageIndex + 1) / pageCount) * 100;
-    console.log(`Completion bar width: ${completionPercentage}%`);
     completionBar.style.width = `${completionPercentage}%`;
+
+    // Update mobile page title
+    const activeMenuItem = menuItems[currentPageIndex];
+    if (mobilePageTitle && activeMenuItem) {
+      mobilePageTitle.textContent =
+        activeMenuItem.querySelector("a").textContent;
+    }
   };
 
   const goToPage = (index) => {

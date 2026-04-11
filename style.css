@@ -6,6 +6,7 @@ body {
     overflow-x: hidden;
     background-color: #f8f9fa;
     color: #333;
+    scroll-behavior: smooth; /* Added for smooth scrolling */
 }
 
 /* Header and Navigation */
@@ -34,11 +35,22 @@ header {
     z-index: 2100;
 }
 
+.mobile-page-title {
+    display: none; /* Hidden by default on desktop */
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .horizontal-menu {
     width: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 70px; /* Space for the global arrow buttons area */
+    max-width: 100%;
+    margin: 0;
+    padding: 0 60px; /* Match button width */
     box-sizing: border-box;
     position: relative;
 }
@@ -85,8 +97,8 @@ header {
 .completion-bar-container {
     position: absolute;
     bottom: 0;
-    left: 70px;
-    right: 70px;
+    left: 60px;
+    right: 60px;
     height: 4px;
     background-color: #eee;
     z-index: 2001;
@@ -152,23 +164,29 @@ header {
 /* Main Content Wrapper */
 .content-wrapper {
     display: flex;
-    width: 600vw; /* 6 pages * 100vw */
+    width: 700vw; /* 7 pages * 100vw */
     height: 100vh;
+    padding-top: 70px; /* Push content down to clear the fixed header */
     transition: transform 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 /* Individual Page Sections */
 .page {
     width: 100vw;
-    height: 100vh;
+    height: calc(
+        100vh - 70px
+    ); /* Adjust height to fit below header (header height is 70px) */
     box-sizing: border-box;
-    padding: 100px 80px 40px 80px; /* Top padding to clear header */
+    padding: 40px 80px; /* Internal padding, top space handled by .content-wrapper */
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* Removed justify-content: center to allow content to start from top */
     align-items: center;
     text-align: center;
     background-color: #ffffff;
+    overflow-y: auto; /* Enable vertical scrolling for content that exceeds page height */
+    padding-top: 150px; /* Adjusted internal top padding to position title lower */
+    padding-bottom: 40px; /* Add internal bottom padding to text */
 }
 
 /* Alternating background colors for sections */
@@ -191,8 +209,19 @@ header {
 
 /* Responsive adjustments */
 @media (max-width: 900px) {
+    header {
+        justify-content: space-between; /* Distribute items */
+    }
+
     .hamburger {
         display: block;
+    }
+
+    .mobile-page-title {
+        display: block; /* Show on mobile */
+        flex-grow: 1; /* Take available space */
+        text-align: center; /* Center the text */
+        margin-right: 20px; /* Space from right edge or next element */
     }
 
     .horizontal-menu {
