@@ -4,9 +4,14 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    overflow-y: hidden; /* Prevent vertical scrolling for the entire page */
     background-color: #f8f9fa;
     color: #333;
     scroll-behavior: smooth; /* Added for smooth scrolling */
+}
+
+html {
+    overflow-y: hidden; /* Ensure html also cannot scroll vertically */
 }
 
 /* Header and Navigation */
