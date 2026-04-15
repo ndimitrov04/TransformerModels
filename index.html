@@ -3,473 +3,161 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Transformer Models: Changing AI</title>
+        <title>Transformer Models - Language Selection</title>
         <link rel="stylesheet" href="style.css" />
+        <style>
+            /* Specific styles for the landing page to ensure centering and layout */
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                padding: 0;
+                text-align: center;
+                flex-direction: column;
+                background-color: #f8f9fa;
+                font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+                overflow: hidden; /* Selection page is a single fixed viewport */
+            }
+            .selection-container {
+                width: 100%;
+                max-width: 1200px;
+                padding: 20px;
+                box-sizing: border-box;
+            }
+            .main-title {
+                font-size: 3.5rem;
+                font-weight: 800;
+                color: #222;
+                margin-bottom: 5rem;
+                text-transform: uppercase;
+                letter-spacing: -1px;
+            }
+            .buttons-container {
+                display: flex;
+                gap: 150px; /* Increased spacing between buttons */
+                justify-content: center;
+                align-items: flex-start;
+                flex-wrap: wrap;
+            }
+            .lang-column {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                max-width: 320px;
+            }
+            .welcome-text {
+                font-size: 1.15rem;
+                line-height: 1.6;
+                margin-bottom: 2.5rem;
+                color: #555;
+                height: 80px; /* Ensures buttons align even if text lengths differ */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .lang-button {
+                text-decoration: none;
+                color: inherit;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                transition:
+                    transform 0.3s ease,
+                    opacity 0.3s ease;
+            }
+            .lang-button:hover {
+                transform: scale(1.05);
+                opacity: 0.9;
+            }
+            .image-box {
+                width: 280px;
+                height: 200px;
+                background-color: #eee;
+                border-radius: 16px;
+                margin-bottom: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            }
+            .image-box img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain; /* Using contain to respect icons like internet.png/lion.png */
+                padding: 20px;
+                box-sizing: border-box;
+            }
+            .btn-text {
+                font-size: 1.6rem;
+                font-weight: 700;
+                color: #007bff;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+            }
+
+            @media (max-width: 768px) {
+                .main-title {
+                    font-size: 2.5rem;
+                    margin-bottom: 3rem;
+                }
+                .buttons-container {
+                    gap: 60px;
+                }
+                .welcome-text {
+                    display: none;
+                    height: auto;
+                    margin-bottom: 1.5rem;
+                }
+                .image-box {
+                    width: 220px;
+                    height: 160px;
+                }
+            }
+        </style>
     </head>
     <body>
-        <header>
-            <button class="hamburger" id="hamburger-menu" aria-label="Menu">
-                &#9776;
-            </button>
-            <span
-                class="mobile-page-title"
-                id="mobile-current-page-title"
-            ></span>
-            <nav class="horizontal-menu">
-                <div class="completion-bar-container">
-                    <div class="completion-bar"></div>
-                </div>
-                <ul>
-                    <li data-page="transformers" class="active">
-                        <a href="#transformers">Transformers</a>
-                    </li>
-                    <li data-page="vision-vs-cnns">
-                        <a href="#vision-vs-cnns">ViTs VS CNNs</a>
-                    </li>
-                    <li data-page="text-vs-rnns">
-                        <a href="#text-vs-rnns">TTs VS RNNs</a>
-                    </li>
-                    <li data-page="self-attention">
-                        <a href="#self-attention">Self Attention</a>
-                    </li>
-                    <li data-page="feed-forward">
-                        <a href="#feed-forward">Feed Forward</a>
-                    </li>
-                    <li data-page="how-changed-ai">
-                        <a href="#how-changed-ai">Impact</a>
-                    </li>
-                    <li data-page="about">
-                        <a href="#about">About</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+        <div class="selection-container">
+            <!-- Big English-only centered title -->
+            <h1 class="main-title">How Transformers changed AI</h1>
 
-        <main class="content-wrapper">
-            <section id="transformers" class="page active">
-                <h1>Transformers</h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
-                </p>
-                <div class="single-image-block">
-                    <img
-                        src="placeholder_trans1.jpg"
-                        alt="Transformer Architecture Overview"
-                    />
-                </div>
-                <p>
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-                <ul>
-                    <li>Item 1: Duis aute irure dolor in reprehenderit.</li>
-                    <li>Item 2: Voluptate velit esse cillum dolore.</li>
-                    <li>Item 3: Eu fugiat nulla pariatur excepteur.</li>
-                    <li>Item 4: Sint occaecat cupidatat non proident.</li>
-                </ul>
-                <div class="two-column-section">
-                    <div class="column text-left">
-                        <p>
-                            Sunt in culpa qui officia deserunt mollit anim id
-                            est laborum. Curabitur pretium tincidunt lacus.
-                        </p>
-                    </div>
-                    <div class="column image-right">
-                        <img
-                            src="placeholder_trans2.jpg"
-                            alt="Attention Mechanism"
-                        />
-                    </div>
-                </div>
-            </section>
-
-            <section id="vision-vs-cnns" class="page">
-                <h1>Vision Transformers VS CNNs</h1>
-
-                <p class="centered-paragraph">
-                    The landscape of computer vision has been dramatically
-                    reshaped by the advent of Vision Transformers (ViTs),
-                    challenging the long-standing dominance of Convolutional
-                    Neural Networks (CNNs). While CNNs excel at capturing local
-                    patterns through their hierarchical convolutional filters,
-                    ViTs leverage self-attention mechanisms to model global
-                    relationships across image patches.
-                </p>
-
-                <div class="two-column-section">
-                    <div class="column image-left">
-                        <img
-                            src="placeholder_cnn.jpg"
-                            alt="CNN Architecture Diagram"
-                            style="width: 100%; height: auto"
-                        />
-                    </div>
-                    <div class="column text-right">
-                        <p>
-                            CNNs have been the workhorse of computer vision for
-                            years, thanks to their ability to learn spatial
-                            hierarchies. Their convolutional layers act like
-                            feature detectors, starting with simple edges and
-                            textures and building up to complex object parts.
-                            This inductive bias makes them highly efficient for
-                            image tasks, especially when data is limited.
-                        </p>
-                    </div>
+            <div class="buttons-container">
+                <!-- English Column -->
+                <div class="lang-column">
+                    <p class="welcome-text">
+                        Explore how Transformer models revolutionized Artificial
+                        Intelligence in English.
+                    </p>
+                    <a href="content_en.html" class="lang-button">
+                        <div class="image-box">
+                            <img
+                                src="img/internet.png"
+                                alt="English language selection icon"
+                            />
+                        </div>
+                        <span class="btn-text">English</span>
+                    </a>
                 </div>
 
-                <div class="two-column-section">
-                    <div class="column text-left">
-                        <p>
-                            Vision Transformers, on the other hand, treat an
-                            image as a sequence of flattened patches. The
-                            self-attention mechanism then allows each patch to
-                            attend to all other patches, enabling the model to
-                            capture long-range dependencies and global context.
-                            This approach, while computationally intensive, has
-                            shown remarkable performance, particularly on
-                            large-scale datasets.
-                        </p>
-                    </div>
-                    <div class="column image-right">
-                        <img
-                            src="placeholder_vit.jpg"
-                            alt="ViT Architecture Diagram"
-                            style="width: 100%; height: auto"
-                        />
-                    </div>
+                <!-- Bulgarian Column -->
+                <div class="lang-column">
+                    <p class="welcome-text">
+                        Разберете как Трансформър моделите революционизираха
+                        изкуствения интелект на български.
+                    </p>
+                    <a href="content_bg.html" class="lang-button">
+                        <div class="image-box">
+                            <img
+                                src="img/lion.png"
+                                alt="Избор на български език"
+                            />
+                        </div>
+                        <span class="btn-text">Български</span>
+                    </a>
                 </div>
-
-                <div class="triple-image-gallery">
-                    <img src="placeholder_img1.jpg" alt="Image 1" />
-                    <img src="placeholder_img2.jpg" alt="Image 2" />
-                    <img src="placeholder_img3.jpg" alt="Image 3" />
-                </div>
-
-                <p class="long-paragraph">
-                    The debate between ViTs and CNNs is not about which is
-                    universally superior, but rather about their complementary
-                    strengths. CNNs offer strong inductive biases beneficial for
-                    image data, requiring less data to train effectively. ViTs,
-                    with their attention-based global reasoning, can achieve
-                    state-of-the-art results, especially when trained on massive
-                    datasets, and show promise in unifying sequence and vision
-                    modeling. Hybrid architectures that combine elements of both
-                    are also emerging as a promising direction, aiming to
-                    leverage the best of both worlds. The choice often depends
-                    on the specific task, dataset size, and computational
-                    resources available.
-                </p>
-
-                <div class="double-image-gallery">
-                    <figure>
-                        <img
-                            src="placeholder_vit_vs_cnn_a.jpg"
-                            alt="ViT vs CNN Comparison A"
-                        />
-                        <figcaption>CNN Feature Maps</figcaption>
-                    </figure>
-                    <figure>
-                        <img
-                            src="placeholder_vit_vs_cnn_b.jpg"
-                            alt="ViT vs CNN Comparison B"
-                        />
-                        <figcaption>ViT Attention Heatmap</figcaption>
-                    </figure>
-                </div>
-
-                <p>
-                    Performance metrics often show ViTs catching up or
-                    surpassing CNNs on benchmarks like ImageNet, especially with
-                    larger models and training data. However, CNNs remain
-                    competitive and often more efficient for many real-world
-                    applications where data might be scarce or computational
-                    budgets are tight.
-                </p>
-
-                <div class="single-image-block">
-                    <img
-                        src="placeholder_hybrid.jpg"
-                        alt="Hybrid Model Diagram"
-                    />
-                </div>
-
-                <p>
-                    The ongoing research aims to bridge the gap, developing more
-                    data-efficient ViTs and more globally-aware CNNs.
-                    Understanding the fundamental differences in how these
-                    architectures process information is key to choosing the
-                    right tool for a given computer vision problem.
-                </p>
-
-                <div class="table-container">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Feature</th>
-                                <th>CNN</th>
-                                <th>ViT</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Primary Mechanism</td>
-                                <td>Convolutional Filters</td>
-                                <td>Self-Attention</td>
-                            </tr>
-                            <tr>
-                                <td>Data Processing</td>
-                                <td>Local Receptive Fields</td>
-                                <td>Global Context (via patches)</td>
-                            </tr>
-                            <tr>
-                                <td>Inductive Bias</td>
-                                <td>
-                                    Strong (locality, translation invariance)
-                                </td>
-                                <td>Weak (learned from data)</td>
-                            </tr>
-                            <tr>
-                                <td>Data Requirements</td>
-                                <td>Moderate</td>
-                                <td>High</td>
-                            </tr>
-                            <tr>
-                                <td>Performance (Large Data)</td>
-                                <td>Excellent</td>
-                                <td>State-of-the-art</td>
-                            </tr>
-                            <tr>
-                                <td>Efficiency (Small Data)</td>
-                                <td>Higher</td>
-                                <td>Lower</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
-
-            <section id="text-vs-rnns" class="page">
-                <h1>Text Transformers VS RNNs</h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Vestibulum in neque et nisl elementum pretium.
-                </p>
-                <div class="single-image-block">
-                    <img
-                        src="placeholder_rnn_vs_transformer.jpg"
-                        alt="RNN vs Transformer"
-                    />
-                </div>
-                <p>
-                    Sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris.
-                </p>
-                <ol>
-                    <li>Item 1: Consectetur adipiscing elit.</li>
-                    <li>Item 2: Mauris vitae ultricies leo integer.</li>
-                    <li>Item 3: Pharetra massa massa ultricies mi.</li>
-                </ol>
-                <p>
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur.
-                </p>
-                <ol>
-                    <li>Item A: Vel pretium lectus quam id leo in.</li>
-                    <li>Item B: Cras sed felis eget velit aliquet sagittis.</li>
-                    <li>Item C: Ornare suspendisse sed nisi lacus sed.</li>
-                </ol>
-            </section>
-
-            <section id="self-attention" class="page">
-                <h1>Self Attention</h1>
-                <p>
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-                <div class="two-column-section">
-                    <div class="column text-left">
-                        <p>
-                            Duis aute irure dolor in reprehenderit in voluptate
-                            velit esse cillum dolore eu fugiat nulla pariatur.
-                        </p>
-                    </div>
-                    <div class="column image-right">
-                        <img
-                            src="placeholder_sa1.jpg"
-                            alt="Self Attention Part 1"
-                        />
-                    </div>
-                </div>
-                <p>
-                    Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-                <div class="single-image-block">
-                    <img src="placeholder_sa2.jpg" alt="Attention Matrix" />
-                </div>
-                <p>
-                    Curabitur pretium tincidunt lacus. Nulla gravida orci a
-                    odio. Nullam varius, turpis et commodo pharetra, est eros
-                    bibendum.
-                </p>
-                <div class="two-column-section">
-                    <div class="column image-left">
-                        <img
-                            src="placeholder_sa3.jpg"
-                            alt="Queries, Keys, Values"
-                        />
-                    </div>
-                    <div class="column text-right">
-                        <p>
-                            Fusce aliquet accumsan sapien. Etiam quis quam.
-                            Etiam fersit amet veroeros feugiat tempus.
-                        </p>
-                    </div>
-                </div>
-                <p>
-                    Donec pretium vulputate sapien nec sagittis aliquam
-                    malesuada. Elementum tempus egestas sed sed risus pretium
-                    quam vulputate.
-                </p>
-                <div class="two-column-section">
-                    <div class="column text-left">
-                        <p>
-                            Sit amet facilisis magna etiam tempor orci eu
-                            lobortis. Purus ut faucibus pulvinar elementum
-                            integer enim neque.
-                        </p>
-                    </div>
-                    <div class="column image-right">
-                        <img src="placeholder_sa4.jpg" alt="Attention Heads" />
-                    </div>
-                </div>
-                <p>
-                    Leo integer malesuada nunc vel risus commodo viverra
-                    maecenas. Tincidunt tortor aliquam nulla facilisi cras
-                    fermentum odio eu.
-                </p>
-                <div class="single-image-block">
-                    <img
-                        src="placeholder_sa5.jpg"
-                        alt="Scaled Dot-Product Attention"
-                    />
-                </div>
-                <p>
-                    Nisl pretium fusce id velit ut tortor. Pharetra diam sit
-                    amet nisl suscipit adipiscing bibendum est.
-                </p>
-                <ul>
-                    <li>Feature A: Elementum pulvinar etiam non quam.</li>
-                    <li>
-                        Feature B: Risus pretium quam vulputate dignissim
-                        suspendisse.
-                    </li>
-                    <li>
-                        Feature C: Mattis molestie a iaculis at erat
-                        pellentesque.
-                    </li>
-                </ul>
-            </section>
-
-            <section id="feed-forward" class="page">
-                <h1>Feed Forward</h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
-                </p>
-                <div class="single-image-block">
-                    <img
-                        src="placeholder_ff1.jpg"
-                        alt="Feed Forward Diagram 1"
-                    />
-                </div>
-                <ul>
-                    <li>Consectetur adipiscing elit.</li>
-                    <li>Sed do eiusmod tempor incididunt.</li>
-                    <li>Ut labore et dolore magna aliqua.</li>
-                </ul>
-                <p>
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-                <div class="single-image-block">
-                    <img
-                        src="placeholder_ff2.jpg"
-                        alt="Feed Forward Diagram 2"
-                    />
-                </div>
-                <p>
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur.
-                </p>
-                <div class="single-image-block">
-                    <img
-                        src="placeholder_ff3.jpg"
-                        alt="Feed Forward Diagram 3"
-                    />
-                </div>
-                <div class="two-column-section">
-                    <div class="column image-left">
-                        <img
-                            src="placeholder_ff4.jpg"
-                            alt="Feed Forward Diagram 4"
-                        />
-                    </div>
-                    <div class="column text-right">
-                        <p>
-                            Excepteur sint occaecat cupidatat non proident, sunt
-                            in culpa qui officia deserunt mollit anim id est
-                            laborum.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <section id="how-changed-ai" class="page">
-                <h1>How Transformers Changed AI</h1>
-                <p>
-                    Fusce aliquet accumsan sapien. Etiam quis quam. Etiam fersit
-                    amet veroeros feugiat tempus.
-                </p>
-                <p>
-                    Donec eu libero sit amet quam egestas semper. Aenean
-                    ultricies mi vitae est. Mauris placerat eleifend leo.
-                    Quisque sit amet est et sapien ullamcorper pharetra.
-                </p>
-                <p>
-                    Vestibulum erat wisi, condimentum sed, commodo vitae, ornare
-                    sit amet, wisi.
-                </p>
-            </section>
-
-            <section id="about" class="page">
-                <h1>About This Project</h1>
-                <p>
-                    This single-page website was created to demonstrate the
-                    impact of Transformer models on the field of Artificial
-                    Intelligence. It covers key concepts, comparisons with
-                    traditional models, and how Transformers have revolutionized
-                    various domains from Natural Language Processing to Computer
-                    Vision.
-                </p>
-                <p>
-                    The design emphasizes a sequential viewing experience with
-                    horizontal scrolling, a dynamic completion bar, and
-                    intuitive navigation.
-                </p>
-                <p>Made with HTML, CSS, and JavaScript.</p>
-            </section>
-        </main>
-
-        <div class="navigation-buttons">
-            <button id="left-button" class="nav-button">&#10094;</button>
-            <button id="right-button" class="nav-button">&#10095;</button>
+            </div>
         </div>
-
-        <script src="script.js"></script>
     </body>
 </html>
