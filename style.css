@@ -252,6 +252,7 @@ header {
 .column img {
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
 }
 
 .triple-image-gallery {
@@ -354,6 +355,18 @@ tr:nth-child(even) {
     background-color: #f9f9f9;
 }
 
+.embed-container {
+    width: 80%;
+    height: 70vh;
+    padding-bottom: 25px;
+}
+iframe {
+    width: 100%;
+    height: 70vh;
+    border: 4px solid #007bff;
+    border-radius: 12px;
+}
+
 /* Responsive adjustments */
 @media (max-width: 900px) {
     header {
@@ -418,4 +431,18 @@ tr:nth-child(even) {
     .page p {
         font-size: 1rem;
     }
+
+    .embed-container {
+        width: 100vw;
+        height: 70vh;
+        padding-bottom: 25px;
+    }
+    
+    iframe {
+        width: 100%;
+        height: 70vh;
+        border: 4px solid #007bff;
+        border-radius: 12px;
+    }
+
 }
