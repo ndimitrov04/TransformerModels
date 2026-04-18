@@ -145,7 +145,7 @@
                 <div class="embed-container">
                     <iframe 
                     src="https://poloclub.github.io/cnn-explainer/"
-                    title="CNN 3D Visualization"
+                    title="CNN Kernel Visualization"
                     loading="lazy"
                     allowfullscreen>
                     </iframe>
@@ -272,125 +272,137 @@
             <section id="text-vs-rnns" class="page">
                 <h1>Text Transformers VS RNNs</h1>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Vestibulum in neque et nisl elementum pretium.
+                    The transformer model was created as a next step to the already existing Recurrent Neural Network (RNN). The most important feature of the transformer is its self-attention mechanism. This mechanism lets the transformer models (which process data in parallel) outperform RNN models (which process data in serial) and allows the transformer models to detect not only data, but the relationships between data as well. Processing data in parallel allows the transformer models to "analyze and remember" the entire dataset (within the context window), without having to go back to check things. RNNs, which process data in serial, cannot "remember" as much data at once and therefore do not work well with large amounts of data. (Stryker & Bergmann, n.d.)
                 </p>
                 <div class="single-image-block">
                     <img
-                        src="placeholder_rnn_vs_transformer.jpg"
+                        src="img/rnn/rnn_vs_trans.png"
                         alt="RNN vs Transformer"
                     />
                 </div>
+                <h2>How do RNNs work?</h2>
                 <p>
-                    Sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris.
+                    The idea behind RNN is straightforward: to predict the next word in a sentence, we need to know the previous words. If we pass to the RNN this sentence “London is the capital …”, then the result will be this “… capital of the United Kingdom”. (Shchegrikovich, 2024)
                 </p>
-                <ol>
-                    <li>Item 1: Consectetur adipiscing elit.</li>
-                    <li>Item 2: Mauris vitae ultricies leo integer.</li>
-                    <li>Item 3: Pharetra massa massa ultricies mi.</li>
-                </ol>
+                <h3>RNN Interactive Showcase - RNN Layers</h3>
+                <div class="embed-container">
+                    <iframe 
+                    src="https://joshvarty.github.io/VisualizingRNNs/"
+                    title="RNN Visualization"
+                    loading="lazy"
+                    allowfullscreen>
+                    </iframe>
+                </div>
                 <p>
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur.
+                    <b>Here are several flaws of the RNN architecture:</b>
                 </p>
+                <h3>The Vanishing Gradient Problem</h3>
+                <p>The RNN model itself defines the importance of words, not their context. The model scans the sentence linearly. “London” will always be the first scanned word and therefore, the most likely to be remembered and therefore the least important word.<p>
+                <img
+                    src="img/rnn/vanishing_gradient.gif"
+                    style="width: 100%; height: auto"
+                />
+                <img
+                    src="img/rnn/memorization.gif"
+                    style="width: 100%; height: auto"
+                />
+                <h3>Hidden State</h3>
+                <p>RNN models have a recurrent <b>hidden state</b> - this is essentially a storage container for the previous words in a sentence. This is a limited, finite container. The hidden state is the primary limitation of RNN models’ ability to understand long texts.</p>
+                <h3>Parallelism?</h3>
+                <p>Parallel computations are impossible with RNNs.</p>
+                <h2>A Problem Similar to CNNs</h2>
+                <p>
+                    RNNs, like CNNs, cannot take into account large amounts of data. CNNs can only analyze a part of an image, similarly, RNNs can only analyze a few words or sentences at a time. Transformers can analyze the entire text at once (within context window limits).
+                </p>
+                <h2>What do Transformers do better?</h2>
                 <ol>
-                    <li>Item A: Vel pretium lectus quam id leo in.</li>
-                    <li>Item B: Cras sed felis eget velit aliquet sagittis.</li>
-                    <li>Item C: Ornare suspendisse sed nisi lacus sed.</li>
+                    <li>In transformer models, word importance is determined by context, not by word order.</li>
+                    <li>Transformer models have no recurrent hidden state.</li>
+                    <li>Transformers were designed for parallel computations.</li>
                 </ol>
             </section>
 
             <section id="self-attention" class="page">
                 <h1>Self Attention</h1>
+                <h2>What is self Attention?</h2>
                 <p>
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea commodo consequat.
+                    As mentioned before, Transformer models owe their versatility to the <b>Multi-Head Self Attention Mechanism</b>.
                 </p>
-                <div class="two-column-section">
-                    <div class="column text-left">
-                        <p>
-                            Duis aute irure dolor in reprehenderit in voluptate
-                            velit esse cillum dolore eu fugiat nulla pariatur.
-                        </p>
-                    </div>
-                    <div class="column img">
-                        <img
-                            src="placeholder_sa1.jpg"
-                            alt="Self Attention Part 1"
-                        />
-                    </div>
-                </div>
                 <p>
-                    Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.
+                    <i>
+                        Self-attention is a mechanism that allows each position in the input sequence to consider the relevancy of, or “attend to,” all other positions in the same sequence when computing the representation of a sequence.
+                    </i>
+                    (Raschka, 2024, p.55)
+                </p>
+                <p>
+                    An example: If you ask an LLM to give you the 5 most important facts of a document, an older RNN based AI would have had to scan the entire document and store intermediate representations of the pieces of data inside of the document, from which it would then give you an answer. Data loss may occur this way, depending on how the AI forms these representations. Newer LLMs can simply "look" at the entire document without having to represent it as something else.
+                </p>
+                <h2>How does Self Attention work?</h2>
+                <p>
+                    Self Attention uses the same principle when working with all types of data. In this example, we will discuss text data, since that is the easiest way to conceptually understand this mechanism.
+                </p>
+                <p>
+                    Let’s say that we have the sentence: <b><i>Your journey starts with a single step</i></b>
                 </p>
                 <div class="single-image-block">
-                    <img src="placeholder_sa2.jpg" alt="Attention Matrix" />
+                    <img src="img/sa/ssa.png" alt="Simplified Self-Attention Diagram">
+                    <figcaption>Very Simplified Self-Attention Mechanism</figcaption>
                 </div>
                 <p>
-                    Curabitur pretium tincidunt lacus. Nulla gravida orci a
-                    odio. Nullam varius, turpis et commodo pharetra, est eros
-                    bibendum.
+                    The goal of this simplified self attention mechanism is to do the following:
+                    For each word in the input prompt, determine which other words in the text are connected contextually to that word.
                 </p>
+                <p>
+                    Each word in the input prompt has its own token embedding. This is a vector which contains values which represent the semantic meaning of words.
+                </p>
+                <p>
+                    An attention weight is applied to each token embedding vector. These weights are random numbers initially. These are the numbers that the AI changes as it trains. These are the numbers that the AI uses to determine the importance of word meaning, word position, etc.
+                </p>
+                <p>
+                    This is a <strong>very simplified single-head self attention mechanism</strong>. Standard attention mechanisms are usually more complex, with multiple heads, utilizing query, key and weight matrices, but the basic idea is the same.
+                </p>
+                <h2>Multi-Head Attention</h2>
                 <div class="two-column-section">
                     <div class="column img">
                         <img
-                            src="placeholder_sa3.jpg"
-                            alt="Queries, Keys, Values"
+                            src="img/sa/mha.png"
+                            alt="Multi-Head Attention Mechanism"
                         />
+                        <figcaption>Multi-Head Attention Mechanism</figcaption>
                     </div>
                     <div class="column text-right">
                         <p>
-                            Fusce aliquet accumsan sapien. Etiam quis quam.
-                            Etiam fersit amet veroeros feugiat tempus.
+                            Modern LLMs use multi-head attention mechanisms. These mechanisms consist of multiple instances of single-head attention mechanisms stacked on top of each other. (Raschka, 2024, p.83).
                         </p>
                     </div>
                 </div>
-                <p>
-                    Donec pretium vulputate sapien nec sagittis aliquam
-                    malesuada. Elementum tempus egestas sed sed risus pretium
-                    quam vulputate.
-                </p>
+                <h2>Why is Self-Attention better than Recurrent Layers?</h2>
                 <div class="two-column-section">
                     <div class="column text-left">
                         <p>
-                            Sit amet facilisis magna etiam tempor orci eu
-                            lobortis. Purus ut faucibus pulvinar elementum
-                            integer enim neque.
+                            Thanks to Self-Attention, transformers have:
                         </p>
+                        <ul>
+                            <li>Lower computational complexity per layer than RNNs and CNNs</li>
+                            <li>
+                                Better potential for parallelization than RNNs and CNNs
+                            </li>
+                            <li>
+                                Understanding of long range dependencies between data
+                            </li>
+                            <li>
+                                Faster training
+                            </li>
+                        </ul>
                     </div>
                     <div class="column img">
-                        <img src="placeholder_sa4.jpg" alt="Attention Heads" />
+                        <img
+                            src="img/sa/attention_showcase.gif"
+                            alt="X"
+                        />
+                        <figcaption>Multi-Head Attention Mechanism</figcaption>
                     </div>
                 </div>
-                <p>
-                    Leo integer malesuada nunc vel risus commodo viverra
-                    maecenas. Tincidunt tortor aliquam nulla facilisi cras
-                    fermentum odio eu.
-                </p>
-                <div class="single-image-block">
-                    <img
-                        src="placeholder_sa5.jpg"
-                        alt="Scaled Dot-Product Attention"
-                    />
-                </div>
-                <p>
-                    Nisl pretium fusce id velit ut tortor. Pharetra diam sit
-                    amet nisl suscipit adipiscing bibendum est.
-                </p>
-                <ul>
-                    <li>Feature A: Elementum pulvinar etiam non quam.</li>
-                    <li>
-                        Feature B: Risus pretium quam vulputate dignissim
-                        suspendisse.
-                    </li>
-                    <li>
-                        Feature C: Mattis molestie a iaculis at erat
-                        pellentesque.
-                    </li>
-                </ul>
             </section>
 
             <section id="feed-forward" class="page">
