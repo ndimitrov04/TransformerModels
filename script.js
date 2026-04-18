@@ -15,6 +15,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const pageCount = pages.length;
 
   const updatePageDisplay = () => {
+    if (!contentWrapper) return;
+
     console.log(`Updating display for page index: ${currentPageIndex}`);
     const offset = -currentPageIndex * 100;
     contentWrapper.style.transform = `translateX(${offset}vw)`;
@@ -27,8 +29,10 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    const completionPercentage = ((currentPageIndex + 1) / pageCount) * 100;
-    completionBar.style.width = `${completionPercentage}%`;
+    if (completionBar && pageCount > 0) {
+      const completionPercentage = ((currentPageIndex + 1) / pageCount) * 100;
+      completionBar.style.width = `${completionPercentage}%`;
+    }
 
     // Update mobile page title
     const activeMenuItem = menuItems[currentPageIndex];
@@ -67,15 +71,50 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Event listeners for global navigation buttons
-  leftButton.addEventListener("click", () => {
-    console.log("Left button clicked");
-    goToPage(currentPageIndex - 1);
-  });
+  if (leftButton) {
+    leftButton.addEventListener("click", () => {
+      console.log("Left button clicked");
+      goToPage(currentPageIndex - 1);
+    });
+  }
 
-  rightButton.addEventListener("click", () => {
-    console.log("Right button clicked");
-    goToPage(currentPageIndex + 1);
-  });
+  if (rightButton) {
+    rightButton.addEventListener("click", () => {
+      console.log("Right button clicked");
+      goToPage(currentPageIndex + 1);
+    });
+  }
+
+  // Image Zoom Lightbox Logic
+  const initImageZoom = () => {
+    const overlay = document.createElement("div");
+    overlay.className = "image-zoom-overlay";
+    const zoomedImg = document.createElement("img");
+    zoomedImg.className = "no-zoom";
+    overlay.appendChild(zoomedImg);
+    document.body.appendChild(overlay);
+
+    const closeZoom = () => {
+      overlay.classList.remove("active");
+      setTimeout(() => {
+        zoomedImg.src = "";
+      }, 300);
+    };
+
+    overlay.addEventListener("click", closeZoom);
+
+    // Use event delegation for better performance and handling dynamic content
+    document.addEventListener("click", (e) => {
+      const img = e.target.closest("img:not(.no-zoom)");
+      if (img && !overlay.contains(img)) {
+        e.preventDefault();
+        zoomedImg.src = img.src;
+        overlay.classList.add("active");
+      }
+    });
+  };
+
+  initImageZoom();
 
   console.log("DOM fully loaded. Initializing display.");
   // Initialize display on load
