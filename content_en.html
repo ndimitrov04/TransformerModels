@@ -408,73 +408,86 @@
             <section id="feed-forward" class="page">
                 <h1>Feed Forward</h1>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
+                    Feed Forward Neural Networks have a layered structure, with data passing sequentially through each layer.
                 </p>
                 <div class="single-image-block">
                     <img
-                        src="placeholder_ff1.jpg"
+                        src="img/ffnn/ffn.png"
                         alt="Feed Forward Diagram 1"
                     />
+                    <figcaption>Feed Forward Neural Network</figcaption>
                 </div>
                 <ul>
-                    <li>Consectetur adipiscing elit.</li>
-                    <li>Sed do eiusmod tempor incididunt.</li>
-                    <li>Ut labore et dolore magna aliqua.</li>
+                    <li><b>Input Layer:</b> This layer consists of neurons that take in the input data. Each neuron represents a specific feature of the input.</li>
+                    <li><b>Hidden Layers:</b> One or more hidden layers sit between the input and output layers. These layers are responsible for detecting complex patterns in the data. Each neuron in a hidden layer calculates a weighted sum of its inputs, followed by applying a non-linear activation function.</li>
+                    <li><b>Output Layer:</b> The output layer produces the final result of the network. The number of neurons in this layer matches the number of output classes in a classification task or the number of values in a regression task.</li>
+                    (GeeksForGeeks, 2025)
                 </ul>
+                <h3>Feed Forward Neural Network Interactive Showcase</h3>
+                <div class="embed-container">
+                    <iframe 
+                    src="https://playground.tensorflow.org/"
+                    title="Feed Forward Neural Network Interactive Showcase"
+                    loading="lazy"
+                    allowfullscreen>
+                    </iframe>
+                </div>
+                <h2>Feed Forward usage in RNNs</h2>
                 <p>
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea commodo consequat.
+                    Feedforward in RNNs is implemented within the recurrence. This means that a part of the output from the feedforward is reused as input. This is done, because RNNs cannot look at all data at the same time. (InfoDiagram, n.d.)
                 </p>
                 <div class="single-image-block">
                     <img
-                        src="placeholder_ff2.jpg"
-                        alt="Feed Forward Diagram 2"
+                        src="img/ffnn/rnnff.png"
+                        alt="Feed Forward in RNNs"
                     />
                 </div>
+                <h2>Feed Forward usage in Transformers</h2>
                 <p>
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur.
+                    Transformers on the other hand use feedforward which is its own block. Data flows linearly through transformer models and the feedforward does not send anything back.
                 </p>
                 <div class="single-image-block">
                     <img
-                        src="placeholder_ff3.jpg"
-                        alt="Feed Forward Diagram 3"
+                        src="img/ffnn/transff.png"
+                        alt="Feed Forward in Transformers"
                     />
-                </div>
-                <div class="two-column-section">
-                    <div class="column img">
-                        <img
-                            src="placeholder_ff4.jpg"
-                            alt="Feed Forward Diagram 4"
-                        />
-                    </div>
-                    <div class="column text-right">
-                        <p>
-                            Excepteur sint occaecat cupidatat non proident, sunt
-                            in culpa qui officia deserunt mollit anim id est
-                            laborum.
-                        </p>
-                    </div>
                 </div>
             </section>
 
             <section id="how-changed-ai" class="page">
                 <h1>How Transformers Changed AI</h1>
                 <p>
-                    Fusce aliquet accumsan sapien. Etiam quis quam. Etiam fersit
-                    amet veroeros feugiat tempus.
+                    <i>
+                        Before transformers arrived, users had to train neural networks with large, labeled datasets that were costly and time-consuming to produce. By finding patterns between elements mathematically, transformers eliminate that need, making available the trillions of images and petabytes of text data on the web and in corporate databases. (Merritt, 2022)
+                    </i>
                 </p>
+                <h2>
+                    Transformers are excellent in pattern recognition tasks
+                </h2>
+                <p>(Agarap, 2019)</p>
+                <h2>
+                    Transformers are superior to RNNs in text to speech tasks
+                </h2>
+                <p>(Karita et al., 2019)</p>
+                <h2>
+                    Transformers have changed computing  
+                </h2>
                 <p>
-                    Donec eu libero sit amet quam egestas semper. Aenean
-                    ultricies mi vitae est. Mauris placerat eleifend leo.
-                    Quisque sit amet est et sapien ullamcorper pharetra.
+                    Thanks to them we now have:
                 </p>
+                <ul>
+                    <li>Better chatbots and personal assistants powered by transformer models</li>
+                    <li>Better search engines which utilize models like BERT</li>
+                    <li>Better machine translation</li>
+                    <li>Image and sound generation</li>
+                    <li>Coding agents</li>
+                    <li>AI accelerated science research</li>
+                    <li>Better self driving vehicles</li>
+                </ul>
                 <p>
-                    Vestibulum erat wisi, condimentum sed, commodo vitae, ornare
-                    sit amet, wisi.
+                    <b>Transformers made it possible for AI to understand relationships in large amounts of data all at once. <h2>Due to all of the reasons mentioned in this article, this</h2></b>
                 </p>
+                <h1> was a true revolution for Artificial Intelligence! </h1>
             </section>
 
             <section id="about" class="page">
@@ -487,12 +500,109 @@
                     various domains from Natural Language Processing to Computer
                     Vision.
                 </p>
+                <p>This website was made with HTML, CSS, and JavaScript.</p>
+                <div class="single-image-block">
+                    <img src="img/logos.png">
+                </div>
+                <p>The website's content was written by me - <strong>Nikola Dimitrov</strong> - around the start of 2026. <strong>No AI was used in any capacity for the text content written on this website.</strong> Scroll down to see all of the data sources I've used for this project.</p>
+                <p>There are multiple embedded pages within this one, which were not created by me. Scroll down to see links to those original pages.</p>
+                <p>Although I usually dislike excessive AI use in software projects, I felt like it was fitting to vibe-code the website's design (JS, CSS + HTML layout), given the topic. To do so, I used an IDE called ZED in combination with Gemini 2.5 Flash, 2.5 Pro and 3.0 Flash. </p>
+
+                <h1> Data Sources </h1>
+                <i>This website would have been impossible to make without all of the written works below. <b>Go check them out!</b></i>
+
+                <br><br>
+                
                 <p>
-                    The design emphasizes a sequential viewing experience with
-                    horizontal scrolling, a dynamic completion bar, and
-                    intuitive navigation.
+                    <a href="https://arxiv.org/abs/1706.03762">
+                    Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, L., & Polosukhin, I. (2017, 6 12). 
+                    Attention Is All You Need (7). Arxiv. Retrieved 11 04, 2026, from https://arxiv.org/abs/1706.03762
+                    </a>
+                    <br>
+                    <b>If there should be only one source you check out, have it be this one.</b>
+                    <br><br>
+
+                    <a href="https://www.researchgate.net/publication/336267803_Comprehensive_Review_of_Artificial_Neural_Network_Applications_to_Pattern_Recognition">
+                    Agarap, A. F. M. (2019).
+                    Comprehensive Review of Artificial Neural Network Applications to Pattern Recognition. IEEE Access, 7, 158820-158846. 10.1109/ACCESS.2019.2945545
+                    </a>
+                    <br><br>
+
+                    <a href="https://www.geeksforgeeks.org/deep-learning/feedforward-neural-network/">
+                    GeeksForGeeks. (2025, July 26). 
+                    Structure of a Feedforward Neural Network. GeeksforGeeks. Retrieved April 12, 2026, from https://www.geeksforgeeks.org/deep-learning/feedforward-neural-network/
+                    InfoDiagram. (n.d.). RNN Schematic DIagram. InfoDIagram.
+                    </a>
+                    <br><br>
+
+                    <a href="https://arxiv.org/pdf/1909.06317">
+                    Karita, S., Chen, N., & Hayashi, T. (2019). 
+                    A Comparative Study on Transformer vs RNN in Speech Applications. In arXiv. arXiv. Retrieved 4 13, 2026, from https://arxiv.org/pdf/1909.06317
+                    </a>
+                    <br><br>
+
+                    <a href="https://blogs.nvidia.com/blog/what-is-a-transformer-model/">
+                    Merritt, R. (2022, March 25). 
+                    What Is a Transformer Model? NVIDIA Blog. Retrieved April 13, 2026, from https://blogs.nvidia.com/blog/what-is-a-transformer-model/
+                    </a>
+                    <br><br>
+
+                    <a href="https://medium.com/@iliaspapastratis/comparison-of-convolutional-neural-networks-and-vision-transformers-vits-a8fc5486c5be/">
+                    Papastratis, I. (2023, 11 30). Comparison of Convolutional Neural Networks and Vision Transformers (ViTs). Medium. Retrieved 11 04, 2026, from https://medium.com/@iliaspapastratis/comparison-of-convolutional-neural-networks-and-vision-transformers-vits-a8fc5486c5be
+                    </a>
+                    <br><br>
+
+                    <a href="https://www.manning.com/books/build-a-large-language-model-from-scratch">
+                    Raschka, S. (2024). 
+                    Build a Large Language Model (From Scratch). Manning.
+                    </a>
+                    <br>
+                    <i>Tried not to include books here, since they cost money, however this is IMO one of the best resources on Transformer models.</i>
+                    <br><br>
+
+                    <a href="https://medium.com/@shchegrikovich/rnn-vs-transformers-or-how-scalability-made-possible-generative-ai-b7efce276392">
+                    Shchegrikovich, S. (2024, 1 28). 
+                    RNN vs Transformers or how scalability made possible Generative AI? Retrieved 4 11, 2026, from https://medium.com/@shchegrikovich/rnn-vs-transformers-or-how-scalability-made-possible-generative-ai-b7efce276392
+                    </a>
+                    <br><br>
+
+                    <a href="https://www.ibm.com/think/topics/transformer-model">
+                    Stryker, C., & Bergmann, D. (n.d.). 
+                    What is a Transformer Model? IBM. Retrieved April 11, 2026, from https://www.ibm.com/think/topics/transformer-model
+                    </a>
+                    <br><br>
+
+                    <a href="https://www.youtube.com/watch?v=KnCRTP11p5U">
+                    Turc, J. (2025, 12 1).
+                    Why are Transformers replacing CNNs? YouTube. Retrieved 11 4, 2026, from https://www.youtube.com/watch?v=KnCRTP11p5U
+                    </a>
+                    <br>
+                    <i>Youtube explanations are usually too simplified to be good sources, but I think that this one is really good.</i>
+                    <br><br>
+
+                    <h1> Embed Sources </h1>
+                    <i>Here are links to all of the interactive examples I've embedded in this website.</i>
+                    <br><br>
+                    <a href="https://poloclub.github.io/cnn-explainer/">
+                    CNN Explainer
+                    </a>
+                    <br><br>
+                    <a href="https://adamharley.com/nn_vis/cnn/3d.html">
+                    CNN 3D Layer Visualiser
+                    </a>
+                    <br><br>
+                    <a href="https://joshvarty.github.io/VisualizingRNNs/">
+                    RNN Visualiser
+                    </a>
+                    <br><br>
+                    <a href="https://playground.tensorflow.org/">
+                    TensorFlow Playground
+                    </a>
+                    <br><br>
+                    <h3>Huge thank you to all of the creators of the webpages I've embedded!</h3>
                 </p>
-                <p>Made with HTML, CSS, and JavaScript.</p>
+                <h1>Contatct</h1>
+                <p>You can contact me at: ______@xyz.abc</p>
             </section>
         </main>
 

@@ -49,36 +49,40 @@
             <section id="transformers" class="page active">
                 <h1>Transformers</h1>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
+                    When the word <strong>Transformer</strong> is mentioned in the context of Artificial Intelligence, it refers to a family of <strong>artificial neural network</strong> (ANN) architectures which are based on the multi-head attention mechanism. This mechanism gives all models that utilize it, the power to analyze large amounts of data and perform operations with all of it at the same time. Previous types of AI models, such as Recurrent Neural Networks (RNNs), could not work with such large amounts of data at the same time and more importantly, could not analyze the long range relationships between different “blocks” of data reliably. (Vaswani et al., 2017)
                 </p>
                 <div class="single-image-block">
                     <img
-                        src="placeholder_trans1.jpg"
+                        src="img/transformers/transarch.png"
                         alt="Transformer Architecture Overview"
                     />
+                    <span><strong>Transformer Architecture</strong></span>
                 </div>
                 <p>
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea commodo consequat.
+                    Transformer models were initially designed to work with text data - as the evolution of RNN based sequence models created for machine translation. Nevertheless, as of today, they have proven to be a useful tool in almost every branch of machine learning, from computer vision and speech recognition to self driving and more. 
+                </p>
+                <p>
+                    Due to the transformer models’ ability to discern connections between data, they are extremely versatile and can be used in almost any machine learning field. This is why they currently are one of the most used types of AI models.
                 </p>
                 <ul>
-                    <li>Item 1: Duis aute irure dolor in reprehenderit.</li>
-                    <li>Item 2: Voluptate velit esse cillum dolore.</li>
-                    <li>Item 3: Eu fugiat nulla pariatur excepteur.</li>
-                    <li>Item 4: Sint occaecat cupidatat non proident.</li>
+                    <li>Chatbots and other smart assistants have become a part of everyday life.</li>
+                    <li>Search engines have become more intuitive to use.</li>
+                    <li>Machine translation has become more reliable.</li>
+                    <li>Science & Medicine research has been greatly accelerated.</li>
+                    <li>Many autonomous, previously unthinkable systems such as self driving vehicles, have become a reality</li>
                 </ul>
                 <div class="two-column-section">
                     <div class="column text-left">
                         <p>
-                            Sunt in culpa qui officia deserunt mollit anim id
-                            est laborum. Curabitur pretium tincidunt lacus.
+                            To put it simply, before transformers, AI was narrow, designed only for a single or a few select tasks and even then, it was sometimes unreliable. Today’s transformer based AI is general-purpose and is much more reliable than before.
+                        </p>
+                        <p>
+                            In the next two chapters, I will attempt to outline how transformer models changed AI in terms of text and image based tasks.
                         </p>
                     </div>
-                    <div class="column image-right">
+                    <div class="column img">
                         <img
-                            src="placeholder_trans2.jpg"
+                            src="img/transformers/multi-head-attention.png"
                             alt="Attention Mechanism"
                         />
                     </div>
@@ -89,32 +93,25 @@
                 <h1>Vision Transformers VS CNNs</h1>
 
                 <p class="centered-paragraph">
-                    The landscape of computer vision has been dramatically
-                    reshaped by the advent of Vision Transformers (ViTs),
-                    challenging the long-standing dominance of Convolutional
-                    Neural Networks (CNNs). While CNNs excel at capturing local
-                    patterns through their hierarchical convolutional filters,
-                    ViTs leverage self-attention mechanisms to model global
-                    relationships across image patches.
+                    Convolutional Neural Networks (CNN) were originally designed for image based tasks such as image generation and image recognition.
+                    CNNs work on the basis of mathematical convolution operations. These operations give the CNNs their vision, but this vision is fundamentally flawed.
                 </p>
 
+                <h2>CNN Locality Flaw</h2>
+
                 <div class="two-column-section">
-                    <div class="column image-left">
+                    <div class="column img">
                         <img
-                            src="placeholder_cnn.jpg"
-                            alt="CNN Architecture Diagram"
+                            src="img/cnn/lorax.png"
                             style="width: 100%; height: auto"
                         />
                     </div>
                     <div class="column text-right">
                         <p>
-                            CNNs have been the workhorse of computer vision for
-                            years, thanks to their ability to learn spatial
-                            hierarchies. Their convolutional layers act like
-                            feature detectors, starting with simple edges and
-                            textures and building up to complex object parts.
-                            This inductive bias makes them highly efficient for
-                            image tasks, especially when data is limited.
+                            Take a look at this image. You can see the entire image at the same time. As a human, as long as you have two working eyes, you can immediately discern that this is the Lorax.
+                        </p>
+                        <p>
+                            <b>CNNs cannot “see” the entire image at once.</b>
                         </p>
                     </div>
                 </div>
@@ -122,88 +119,113 @@
                 <div class="two-column-section">
                     <div class="column text-left">
                         <p>
-                            Vision Transformers, on the other hand, treat an
-                            image as a sequence of flattened patches. The
-                            self-attention mechanism then allows each patch to
-                            attend to all other patches, enabling the model to
-                            capture long-range dependencies and global context.
-                            This approach, while computationally intensive, has
-                            shown remarkable performance, particularly on
-                            large-scale datasets.
+                            A CNN layer would do the following to this image:
+                            It would start scanning the image pixel by pixel, from top to bottom, left to right. Around each pixel, it would scan a predetermined area of 1 pixel for example. This way, it would only be able to “see” a 3x3 pixel grid (for example) at any given time. This 3x3 pixel grid is called a kernel.
                         </p>
                     </div>
-                    <div class="column image-right">
+                    <div class="column img">
                         <img
-                            src="placeholder_vit.jpg"
-                            alt="ViT Architecture Diagram"
+                            src="img/cnn/lorax2.png"
                             style="width: 100%; height: auto"
                         />
                     </div>
                 </div>
 
                 <div class="triple-image-gallery">
-                    <img src="placeholder_img1.jpg" alt="Image 1" />
-                    <img src="placeholder_img2.jpg" alt="Image 2" />
-                    <img src="placeholder_img3.jpg" alt="Image 3" />
+                    <img src="img/cnn/loraxr.png" alt="Red channel" />
+                    <img src="img/cnn/loraxg.png" alt="Green channel" />
+                    <img src="img/cnn/loraxb.png" alt="Blue channel" />
+                </div>
+
+                <p>
+                    Color images are made out of three monochrome layers: a red layer, a green layer and a blue layer.
+                </p>
+
+                <h3>CNN Interactive Showcase - Kernel</h3>
+                <div class="embed-container">
+                    <iframe 
+                    src="https://poloclub.github.io/cnn-explainer/"
+                    title="CNN Kernel Visualization"
+                    loading="lazy"
+                    allowfullscreen>
+                    </iframe>
                 </div>
 
                 <p class="long-paragraph">
-                    The debate between ViTs and CNNs is not about which is
-                    universally superior, but rather about their complementary
-                    strengths. CNNs offer strong inductive biases beneficial for
-                    image data, requiring less data to train effectively. ViTs,
-                    with their attention-based global reasoning, can achieve
-                    state-of-the-art results, especially when trained on massive
-                    datasets, and show promise in unifying sequence and vision
-                    modeling. Hybrid architectures that combine elements of both
-                    are also emerging as a promising direction, aiming to
-                    leverage the best of both worlds. The choice often depends
-                    on the specific task, dataset size, and computational
-                    resources available.
+                    By applying this pixel to pixel scan to all three monochrome layers and analyzing the relations between each scanned kernel, it can create a single image, which is a 2D feature map. A CNN consists of multiple of these CNN layers with kernels which have different properties. By analyzing these images and creating different representations of the image data via the different kernels, the CNN can attempt to “understand” what it is “looking at”.<br><br>
+                    This way of viewing images is flawed, since it only takes into account small areas of an image to try to deduct what the subject of the image is. A simple analogy would be to try to deduct what a jigsaw puzzle will look like when it is finished by looking at three jigsaw pieces connected together. Depending on the size of the puzzle, this would range from very difficult to completely impossible.<br><br>
+                    This limitation leads to a severe side effect. CNN based AI will be more influenced by color rather than by shape. A CNN would classify the left image as a macaw and the right one as a cat. The two are the same image. The first image is simply more saturated. (Turc, 2025)
                 </p>
 
                 <div class="double-image-gallery">
                     <figure>
                         <img
-                            src="placeholder_vit_vs_cnn_a.jpg"
-                            alt="ViT vs CNN Comparison A"
+                            src="img/cnn/catsat.png"
+                            alt="Saturated cat"
                         />
-                        <figcaption>CNN Feature Maps</figcaption>
+                        <figcaption>Saturated Cat</figcaption>
                     </figure>
                     <figure>
                         <img
-                            src="placeholder_vit_vs_cnn_b.jpg"
-                            alt="ViT vs CNN Comparison B"
+                            src="img/cnn/catdesat.png"
+                            alt="Desaturated cat"
                         />
-                        <figcaption>ViT Attention Heatmap</figcaption>
+                        <figcaption>Desaturated Cat</figcaption>
                     </figure>
                 </div>
 
                 <p>
-                    Performance metrics often show ViTs catching up or
-                    surpassing CNNs on benchmarks like ImageNet, especially with
-                    larger models and training data. However, CNNs remain
-                    competitive and often more efficient for many real-world
-                    applications where data might be scarce or computational
-                    budgets are tight.
+                    <b>This limitation can only be mitigated, not fixed.</b>
+                </p>
+
+                <h3>CNN Interactive Showcase - Convolution Layers</h3>
+                <div class="embed-container">
+                    <iframe 
+                    src="https://adamharley.com/nn_vis/cnn/3d.html"
+                    title="CNN 3D Visualization"
+                    loading="lazy"
+                    allowfullscreen>
+                    </iframe>
+                </div>
+
+                <h2>How would a Vision Transformer do it?</h2>
+
+                <p>
+                    CNNs can only analyze small areas of an image and therefore understand only the relations between adjacent pixels. Thanks to their self-attention mechanisms, Vision Transformers (ViT) can analyze an entire image at once. This means that they can understand all relations between all pixels. A transformer model would scan the image pixel by pixel (the current scanned pixel in ViTs is called the query pixel), but instead of scanning a local area (3x3, 4x4, 5x5, etc.) around each pixel, it would scan the entire image around each pixel. Basically, it would scan the entire image as many times as there are pixels in the image. And for each scanned pixel, it would map out how the scanned pixel relates to all other pixels in the image.
                 </p>
 
                 <div class="single-image-block">
                     <img
-                        src="placeholder_hybrid.jpg"
-                        alt="Hybrid Model Diagram"
+                        src="img/cnn/sa_vs_conv.png"
                     />
                 </div>
 
+                <h2>Transformers can do Convolution</h2>
+
                 <p>
-                    The ongoing research aims to bridge the gap, developing more
-                    data-efficient ViTs and more globally-aware CNNs.
-                    Understanding the fundamental differences in how these
-                    architectures process information is key to choosing the
-                    right tool for a given computer vision problem.
+                    Taking the above into account - the principle between the two types of analysis is almost the same. Vision Transformers just do what CNNs do, but better, since they take more pixel relations in account. Therefore, Vision Transformer models can do anything CNNs can do. This is why there are <i>almost</i> no reasons left to use CNNs.*
                 </p>
 
-                <div class="table-container">
+                <p>
+                    <i>
+                        * CNNs are still preferred for: Edge devices; Real-time systems; Smaller datasets; Lower computational cost
+                    </i>
+                </p>
+
+                <h2>Performance</h2>
+
+                <p>
+                    CNNs allow parallel computation within each layer but still process data through layers sequentially. Transformers, in contrast, enable parallel processing not only within layers but also across all input elements through self-attention, making them especially efficient for sequence modeling.
+                    This is why transformer models are faster than CNN based models.
+                </p>
+
+                <h2>Comparison Table</h2>
+
+                <p>
+                    Here is a comparison chart between CNNs and ViTs based on (Papastratis, 2023)
+                </p>
+
+                <div>
                     <table>
                         <thead>
                             <tr>
@@ -214,236 +236,258 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Primary Mechanism</td>
-                                <td>Convolutional Filters</td>
-                                <td>Self-Attention</td>
+                                <td>Speed</td>
+                                <td>Slow (sequential layer processing)</td>
+                                <td>Fast (parallel layer processing)</td>
                             </tr>
                             <tr>
-                                <td>Data Processing</td>
-                                <td>Local Receptive Fields</td>
-                                <td>Global Context (via patches)</td>
+                                <td>Analyzable Context</td>
+                                <td>Little</td>
+                                <td>Entire Input Sequence*</td>
                             </tr>
                             <tr>
-                                <td>Inductive Bias</td>
+                                <td>Layer Complexity</td>
                                 <td>
-                                    Strong (locality, translation invariance)
+                                    Complex
                                 </td>
-                                <td>Weak (learned from data)</td>
+                                <td>Simpler</td>
                             </tr>
                             <tr>
-                                <td>Data Requirements</td>
-                                <td>Moderate</td>
-                                <td>High</td>
-                            </tr>
-                            <tr>
-                                <td>Performance (Large Data)</td>
-                                <td>Excellent</td>
-                                <td>State-of-the-art</td>
-                            </tr>
-                            <tr>
-                                <td>Efficiency (Small Data)</td>
-                                <td>Higher</td>
-                                <td>Lower</td>
+                                <td>Training</td>
+                                <td>Requires large amounts of labeled data to train</td>
+                                <td>Can train on unlabeled data</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
+
+                <p>
+                    <i>
+                        * Within context window.
+                    </i>
+                </p>
+
             </section>
 
             <section id="text-vs-rnns" class="page">
                 <h1>Text Transformers VS RNNs</h1>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Vestibulum in neque et nisl elementum pretium.
+                    The transformer model was created as a next step to the already existing Recurrent Neural Network (RNN). The most important feature of the transformer is its self-attention mechanism. This mechanism lets the transformer models (which process data in parallel) outperform RNN models (which process data in serial) and allows the transformer models to detect not only data, but the relationships between data as well. Processing data in parallel allows the transformer models to "analyze and remember" the entire dataset (within the context window), without having to go back to check things. RNNs, which process data in serial, cannot "remember" as much data at once and therefore do not work well with large amounts of data. (Stryker & Bergmann, n.d.)
                 </p>
                 <div class="single-image-block">
                     <img
-                        src="placeholder_rnn_vs_transformer.jpg"
+                        src="img/rnn/rnn_vs_trans.png"
                         alt="RNN vs Transformer"
                     />
                 </div>
+                <h2>How do RNNs work?</h2>
                 <p>
-                    Sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris.
+                    The idea behind RNN is straightforward: to predict the next word in a sentence, we need to know the previous words. If we pass to the RNN this sentence “London is the capital …”, then the result will be this “… capital of the United Kingdom”. (Shchegrikovich, 2024)
                 </p>
-                <ol>
-                    <li>Item 1: Consectetur adipiscing elit.</li>
-                    <li>Item 2: Mauris vitae ultricies leo integer.</li>
-                    <li>Item 3: Pharetra massa massa ultricies mi.</li>
-                </ol>
+                <h3>RNN Interactive Showcase - RNN Layers</h3>
+                <div class="embed-container">
+                    <iframe 
+                    src="https://joshvarty.github.io/VisualizingRNNs/"
+                    title="RNN Visualization"
+                    loading="lazy"
+                    allowfullscreen>
+                    </iframe>
+                </div>
                 <p>
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur.
+                    <b>Here are several flaws of the RNN architecture:</b>
                 </p>
+                <h3>The Vanishing Gradient Problem</h3>
+                <p>The RNN model itself defines the importance of words, not their context. The model scans the sentence linearly. “London” will always be the first scanned word and therefore, the most likely to be remembered and therefore the least important word.<p>
+                <img
+                    src="img/rnn/vanishing_gradient.gif"
+                    style="width: 100%; height: auto"
+                />
+                <img
+                    src="img/rnn/memorization.gif"
+                    style="width: 100%; height: auto"
+                />
+                <h3>Hidden State</h3>
+                <p>RNN models have a recurrent <b>hidden state</b> - this is essentially a storage container for the previous words in a sentence. This is a limited, finite container. The hidden state is the primary limitation of RNN models’ ability to understand long texts.</p>
+                <h3>Parallelism?</h3>
+                <p>Parallel computations are impossible with RNNs.</p>
+                <h2>A Problem Similar to CNNs</h2>
+                <p>
+                    RNNs, like CNNs, cannot take into account large amounts of data. CNNs can only analyze a part of an image, similarly, RNNs can only analyze a few words or sentences at a time. Transformers can analyze the entire text at once (within context window limits).
+                </p>
+                <h2>What do Transformers do better?</h2>
                 <ol>
-                    <li>Item A: Vel pretium lectus quam id leo in.</li>
-                    <li>Item B: Cras sed felis eget velit aliquet sagittis.</li>
-                    <li>Item C: Ornare suspendisse sed nisi lacus sed.</li>
+                    <li>In transformer models, word importance is determined by context, not by word order.</li>
+                    <li>Transformer models have no recurrent hidden state.</li>
+                    <li>Transformers were designed for parallel computations.</li>
                 </ol>
             </section>
 
             <section id="self-attention" class="page">
                 <h1>Self Attention</h1>
+                <h2>What is self Attention?</h2>
                 <p>
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea commodo consequat.
+                    As mentioned before, Transformer models owe their versatility to the <b>Multi-Head Self Attention Mechanism</b>.
                 </p>
-                <div class="two-column-section">
-                    <div class="column text-left">
-                        <p>
-                            Duis aute irure dolor in reprehenderit in voluptate
-                            velit esse cillum dolore eu fugiat nulla pariatur.
-                        </p>
-                    </div>
-                    <div class="column image-right">
-                        <img
-                            src="placeholder_sa1.jpg"
-                            alt="Self Attention Part 1"
-                        />
-                    </div>
-                </div>
                 <p>
-                    Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.
+                    <i>
+                        Self-attention is a mechanism that allows each position in the input sequence to consider the relevancy of, or “attend to,” all other positions in the same sequence when computing the representation of a sequence.
+                    </i>
+                    (Raschka, 2024, p.55)
+                </p>
+                <p>
+                    An example: If you ask an LLM to give you the 5 most important facts of a document, an older RNN based AI would have had to scan the entire document and store intermediate representations of the pieces of data inside of the document, from which it would then give you an answer. Data loss may occur this way, depending on how the AI forms these representations. Newer LLMs can simply "look" at the entire document without having to represent it as something else.
+                </p>
+                <h2>How does Self Attention work?</h2>
+                <p>
+                    Self Attention uses the same principle when working with all types of data. In this example, we will discuss text data, since that is the easiest way to conceptually understand this mechanism.
+                </p>
+                <p>
+                    Let’s say that we have the sentence: <b><i>Your journey starts with a single step</i></b>
                 </p>
                 <div class="single-image-block">
-                    <img src="placeholder_sa2.jpg" alt="Attention Matrix" />
+                    <img src="img/sa/ssa.png" alt="Simplified Self-Attention Diagram">
+                    <figcaption>Very Simplified Self-Attention Mechanism</figcaption>
                 </div>
                 <p>
-                    Curabitur pretium tincidunt lacus. Nulla gravida orci a
-                    odio. Nullam varius, turpis et commodo pharetra, est eros
-                    bibendum.
+                    The goal of this simplified self attention mechanism is to do the following:
+                    For each word in the input prompt, determine which other words in the text are connected contextually to that word.
                 </p>
+                <p>
+                    Each word in the input prompt has its own token embedding. This is a vector which contains values which represent the semantic meaning of words.
+                </p>
+                <p>
+                    An attention weight is applied to each token embedding vector. These weights are random numbers initially. These are the numbers that the AI changes as it trains. These are the numbers that the AI uses to determine the importance of word meaning, word position, etc.
+                </p>
+                <p>
+                    This is a <strong>very simplified single-head self attention mechanism</strong>. Standard attention mechanisms are usually more complex, with multiple heads, utilizing query, key and weight matrices, but the basic idea is the same.
+                </p>
+                <h2>Multi-Head Attention</h2>
                 <div class="two-column-section">
-                    <div class="column image-left">
+                    <div class="column img">
                         <img
-                            src="placeholder_sa3.jpg"
-                            alt="Queries, Keys, Values"
+                            src="img/sa/mha.png"
+                            alt="Multi-Head Attention Mechanism"
                         />
+                        <figcaption>Multi-Head Attention Mechanism</figcaption>
                     </div>
                     <div class="column text-right">
                         <p>
-                            Fusce aliquet accumsan sapien. Etiam quis quam.
-                            Etiam fersit amet veroeros feugiat tempus.
+                            Modern LLMs use multi-head attention mechanisms. These mechanisms consist of multiple instances of single-head attention mechanisms stacked on top of each other. (Raschka, 2024, p.83).
                         </p>
                     </div>
                 </div>
-                <p>
-                    Donec pretium vulputate sapien nec sagittis aliquam
-                    malesuada. Elementum tempus egestas sed sed risus pretium
-                    quam vulputate.
-                </p>
+                <h2>Why is Self-Attention better than Recurrent Layers?</h2>
                 <div class="two-column-section">
                     <div class="column text-left">
                         <p>
-                            Sit amet facilisis magna etiam tempor orci eu
-                            lobortis. Purus ut faucibus pulvinar elementum
-                            integer enim neque.
+                            Thanks to Self-Attention, transformers have:
                         </p>
+                        <ul>
+                            <li>Lower computational complexity per layer than RNNs and CNNs</li>
+                            <li>
+                                Better potential for parallelization than RNNs and CNNs
+                            </li>
+                            <li>
+                                Understanding of long range dependencies between data
+                            </li>
+                            <li>
+                                Faster training
+                            </li>
+                        </ul>
                     </div>
-                    <div class="column image-right">
-                        <img src="placeholder_sa4.jpg" alt="Attention Heads" />
+                    <div class="column img">
+                        <img
+                            src="img/sa/attention_showcase.gif"
+                            alt="X"
+                        />
+                        <figcaption>Multi-Head Attention Mechanism</figcaption>
                     </div>
                 </div>
-                <p>
-                    Leo integer malesuada nunc vel risus commodo viverra
-                    maecenas. Tincidunt tortor aliquam nulla facilisi cras
-                    fermentum odio eu.
-                </p>
-                <div class="single-image-block">
-                    <img
-                        src="placeholder_sa5.jpg"
-                        alt="Scaled Dot-Product Attention"
-                    />
-                </div>
-                <p>
-                    Nisl pretium fusce id velit ut tortor. Pharetra diam sit
-                    amet nisl suscipit adipiscing bibendum est.
-                </p>
-                <ul>
-                    <li>Feature A: Elementum pulvinar etiam non quam.</li>
-                    <li>
-                        Feature B: Risus pretium quam vulputate dignissim
-                        suspendisse.
-                    </li>
-                    <li>
-                        Feature C: Mattis molestie a iaculis at erat
-                        pellentesque.
-                    </li>
-                </ul>
             </section>
 
             <section id="feed-forward" class="page">
                 <h1>Feed Forward</h1>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
+                    Feed Forward Neural Networks have a layered structure, with data passing sequentially through each layer.
                 </p>
                 <div class="single-image-block">
                     <img
-                        src="placeholder_ff1.jpg"
+                        src="img/ffnn/ffn.png"
                         alt="Feed Forward Diagram 1"
                     />
+                    <figcaption>Feed Forward Neural Network</figcaption>
                 </div>
                 <ul>
-                    <li>Consectetur adipiscing elit.</li>
-                    <li>Sed do eiusmod tempor incididunt.</li>
-                    <li>Ut labore et dolore magna aliqua.</li>
+                    <li><b>Input Layer:</b> This layer consists of neurons that take in the input data. Each neuron represents a specific feature of the input.</li>
+                    <li><b>Hidden Layers:</b> One or more hidden layers sit between the input and output layers. These layers are responsible for detecting complex patterns in the data. Each neuron in a hidden layer calculates a weighted sum of its inputs, followed by applying a non-linear activation function.</li>
+                    <li><b>Output Layer:</b> The output layer produces the final result of the network. The number of neurons in this layer matches the number of output classes in a classification task or the number of values in a regression task.</li>
+                    (GeeksForGeeks, 2025)
                 </ul>
+                <h3>Feed Forward Neural Network Interactive Showcase</h3>
+                <div class="embed-container">
+                    <iframe 
+                    src="https://playground.tensorflow.org/"
+                    title="Feed Forward Neural Network Interactive Showcase"
+                    loading="lazy"
+                    allowfullscreen>
+                    </iframe>
+                </div>
+                <h2>Feed Forward usage in RNNs</h2>
                 <p>
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea commodo consequat.
+                    Feedforward in RNNs is implemented within the recurrence. This means that a part of the output from the feedforward is reused as input. This is done, because RNNs cannot look at all data at the same time. (InfoDiagram, n.d.)
                 </p>
                 <div class="single-image-block">
                     <img
-                        src="placeholder_ff2.jpg"
-                        alt="Feed Forward Diagram 2"
+                        src="img/ffnn/rnnff.png"
+                        alt="Feed Forward in RNNs"
                     />
                 </div>
+                <h2>Feed Forward usage in Transformers</h2>
                 <p>
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur.
+                    Transformers on the other hand use feedforward which is its own block. Data flows linearly through transformer models and the feedforward does not send anything back.
                 </p>
                 <div class="single-image-block">
                     <img
-                        src="placeholder_ff3.jpg"
-                        alt="Feed Forward Diagram 3"
+                        src="img/ffnn/transff.png"
+                        alt="Feed Forward in Transformers"
                     />
-                </div>
-                <div class="two-column-section">
-                    <div class="column image-left">
-                        <img
-                            src="placeholder_ff4.jpg"
-                            alt="Feed Forward Diagram 4"
-                        />
-                    </div>
-                    <div class="column text-right">
-                        <p>
-                            Excepteur sint occaecat cupidatat non proident, sunt
-                            in culpa qui officia deserunt mollit anim id est
-                            laborum.
-                        </p>
-                    </div>
                 </div>
             </section>
 
             <section id="how-changed-ai" class="page">
                 <h1>How Transformers Changed AI</h1>
                 <p>
-                    Fusce aliquet accumsan sapien. Etiam quis quam. Etiam fersit
-                    amet veroeros feugiat tempus.
+                    <i>
+                        Before transformers arrived, users had to train neural networks with large, labeled datasets that were costly and time-consuming to produce. By finding patterns between elements mathematically, transformers eliminate that need, making available the trillions of images and petabytes of text data on the web and in corporate databases. (Merritt, 2022)
+                    </i>
                 </p>
+                <h2>
+                    Transformers are excellent in pattern recognition tasks
+                </h2>
+                <p>(Agarap, 2019)</p>
+                <h2>
+                    Transformers are superior to RNNs in text to speech tasks
+                </h2>
+                <p>(Karita et al., 2019)</p>
+                <h2>
+                    Transformers have changed computing  
+                </h2>
                 <p>
-                    Donec eu libero sit amet quam egestas semper. Aenean
-                    ultricies mi vitae est. Mauris placerat eleifend leo.
-                    Quisque sit amet est et sapien ullamcorper pharetra.
+                    Thanks to them we now have:
                 </p>
+                <ul>
+                    <li>Better chatbots and personal assistants powered by transformer models</li>
+                    <li>Better search engines which utilize models like BERT</li>
+                    <li>Better machine translation</li>
+                    <li>Image and sound generation</li>
+                    <li>Coding agents</li>
+                    <li>AI accelerated science research</li>
+                    <li>Better self driving vehicles</li>
+                </ul>
                 <p>
-                    Vestibulum erat wisi, condimentum sed, commodo vitae, ornare
-                    sit amet, wisi.
+                    <b>Transformers made it possible for AI to understand relationships in large amounts of data all at once. <h2>Due to all of the reasons mentioned in this article, this</h2></b>
                 </p>
+                <h1> was a true revolution for Artificial Intelligence! </h1>
             </section>
 
             <section id="about" class="page">
@@ -456,12 +500,109 @@
                     various domains from Natural Language Processing to Computer
                     Vision.
                 </p>
+                <p>This website was made with HTML, CSS, and JavaScript.</p>
+                <div class="single-image-block">
+                    <img src="img/logos.png">
+                </div>
+                <p>The website's content was written by me - <strong>Nikola Dimitrov</strong> - around the start of 2026. <strong>No AI was used in any capacity for the text content written on this website.</strong> Scroll down to see all of the data sources I've used for this project.</p>
+                <p>There are multiple embedded pages within this one, which were not created by me. Scroll down to see links to those original pages.</p>
+                <p>Although I usually dislike excessive AI use in software projects, I felt like it was fitting to vibe-code the website's design (JS, CSS + HTML layout), given the topic. To do so, I used an IDE called ZED in combination with Gemini 2.5 Flash, 2.5 Pro and 3.0 Flash. </p>
+
+                <h1> Data Sources </h1>
+                <i>This website would have been impossible to make without all of the written works below. <b>Go check them out!</b></i>
+
+                <br><br>
+                
                 <p>
-                    The design emphasizes a sequential viewing experience with
-                    horizontal scrolling, a dynamic completion bar, and
-                    intuitive navigation.
+                    <a href="https://arxiv.org/abs/1706.03762">
+                    Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, L., & Polosukhin, I. (2017, 6 12). 
+                    Attention Is All You Need (7). Arxiv. Retrieved 11 04, 2026, from https://arxiv.org/abs/1706.03762
+                    </a>
+                    <br>
+                    <b>If there should be only one source you check out, have it be this one.</b>
+                    <br><br>
+
+                    <a href="https://www.researchgate.net/publication/336267803_Comprehensive_Review_of_Artificial_Neural_Network_Applications_to_Pattern_Recognition">
+                    Agarap, A. F. M. (2019).
+                    Comprehensive Review of Artificial Neural Network Applications to Pattern Recognition. IEEE Access, 7, 158820-158846. 10.1109/ACCESS.2019.2945545
+                    </a>
+                    <br><br>
+
+                    <a href="https://www.geeksforgeeks.org/deep-learning/feedforward-neural-network/">
+                    GeeksForGeeks. (2025, July 26). 
+                    Structure of a Feedforward Neural Network. GeeksforGeeks. Retrieved April 12, 2026, from https://www.geeksforgeeks.org/deep-learning/feedforward-neural-network/
+                    InfoDiagram. (n.d.). RNN Schematic DIagram. InfoDIagram.
+                    </a>
+                    <br><br>
+
+                    <a href="https://arxiv.org/pdf/1909.06317">
+                    Karita, S., Chen, N., & Hayashi, T. (2019). 
+                    A Comparative Study on Transformer vs RNN in Speech Applications. In arXiv. arXiv. Retrieved 4 13, 2026, from https://arxiv.org/pdf/1909.06317
+                    </a>
+                    <br><br>
+
+                    <a href="https://blogs.nvidia.com/blog/what-is-a-transformer-model/">
+                    Merritt, R. (2022, March 25). 
+                    What Is a Transformer Model? NVIDIA Blog. Retrieved April 13, 2026, from https://blogs.nvidia.com/blog/what-is-a-transformer-model/
+                    </a>
+                    <br><br>
+
+                    <a href="https://medium.com/@iliaspapastratis/comparison-of-convolutional-neural-networks-and-vision-transformers-vits-a8fc5486c5be/">
+                    Papastratis, I. (2023, 11 30). Comparison of Convolutional Neural Networks and Vision Transformers (ViTs). Medium. Retrieved 11 04, 2026, from https://medium.com/@iliaspapastratis/comparison-of-convolutional-neural-networks-and-vision-transformers-vits-a8fc5486c5be
+                    </a>
+                    <br><br>
+
+                    <a href="https://www.manning.com/books/build-a-large-language-model-from-scratch">
+                    Raschka, S. (2024). 
+                    Build a Large Language Model (From Scratch). Manning.
+                    </a>
+                    <br>
+                    <i>Tried not to include books here, since they cost money, however this is IMO one of the best resources on Transformer models.</i>
+                    <br><br>
+
+                    <a href="https://medium.com/@shchegrikovich/rnn-vs-transformers-or-how-scalability-made-possible-generative-ai-b7efce276392">
+                    Shchegrikovich, S. (2024, 1 28). 
+                    RNN vs Transformers or how scalability made possible Generative AI? Retrieved 4 11, 2026, from https://medium.com/@shchegrikovich/rnn-vs-transformers-or-how-scalability-made-possible-generative-ai-b7efce276392
+                    </a>
+                    <br><br>
+
+                    <a href="https://www.ibm.com/think/topics/transformer-model">
+                    Stryker, C., & Bergmann, D. (n.d.). 
+                    What is a Transformer Model? IBM. Retrieved April 11, 2026, from https://www.ibm.com/think/topics/transformer-model
+                    </a>
+                    <br><br>
+
+                    <a href="https://www.youtube.com/watch?v=KnCRTP11p5U">
+                    Turc, J. (2025, 12 1).
+                    Why are Transformers replacing CNNs? YouTube. Retrieved 11 4, 2026, from https://www.youtube.com/watch?v=KnCRTP11p5U
+                    </a>
+                    <br>
+                    <i>Youtube explanations are usually too simplified to be good sources, but I think that this one is really good.</i>
+                    <br><br>
+
+                    <h1> Embed Sources </h1>
+                    <i>Here are links to all of the interactive examples I've embedded in this website.</i>
+                    <br><br>
+                    <a href="https://poloclub.github.io/cnn-explainer/">
+                    CNN Explainer
+                    </a>
+                    <br><br>
+                    <a href="https://adamharley.com/nn_vis/cnn/3d.html">
+                    CNN 3D Layer Visualiser
+                    </a>
+                    <br><br>
+                    <a href="https://joshvarty.github.io/VisualizingRNNs/">
+                    RNN Visualiser
+                    </a>
+                    <br><br>
+                    <a href="https://playground.tensorflow.org/">
+                    TensorFlow Playground
+                    </a>
+                    <br><br>
+                    <h3>Huge thank you to all of the creators of the webpages I've embedded!</h3>
                 </p>
-                <p>Made with HTML, CSS, and JavaScript.</p>
+                <h1>Contatct</h1>
+                <p>You can contact me at: ______@xyz.abc</p>
             </section>
         </main>
 
