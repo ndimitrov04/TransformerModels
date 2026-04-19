@@ -49,7 +49,7 @@
             <section id="transformers" class="page active">
                 <h1>Transformers</h1>
                 <p>
-                    When the word <strong>Transformer</strong> is mentioned in the context of Artificial Intelligence, it refers to a family of <strong>artificial neural network</strong> (ANN) architectures which are based on the multi-head attention mechanism. This mechanism gives all models that utilize it, the power to analyze large amounts of data and perform operations with all of it at the same time. Previous types of AI models, such as Recurrent Neural Networks (RNNs), could not work with such large amounts of data at the same time and more importantly, could not analyze the long range relationships between different “blocks” of data reliably. (Vaswani et al., 2017)
+                    When the word <strong>Transformer</strong> is mentioned in the context of Artificial Intelligence, it refers to a family of <strong>artificial neural network</strong> (ANN) architectures which are based on the multi-head attention mechanism. This mechanism gives all models that utilize it, the power to analyze large amounts of data and perform operations with all of it at the same time. Previous types of AI models, such as Recurrent Neural Networks (RNNs), could not work with such large amounts of data at the same time and more importantly, could not analyze the long range relationships between different “blocks” of data reliably. <a href="https://arxiv.org/abs/1706.03762">(Vaswani et al., 2017)</a>
                 </p>
                 <div class="single-image-block">
                     <img
@@ -59,7 +59,7 @@
                     <span><strong>Transformer Architecture</strong></span>
                 </div>
                 <p>
-                    Transformer models were initially designed to work with text data - as the evolution of RNN based sequence models created for machine translation. Nevertheless, as of today, they have proven to be a useful tool in almost every branch of machine learning, from computer vision and speech recognition to self driving and more. 
+                    Transformer models were initially designed to work with text data - as the evolution of RNN based sequence models created for machine translation. Nevertheless, as of today, they have proven to be a useful tool in almost every branch of machine learning, from computer vision and speech recognition to self driving and more.
                 </p>
                 <p>
                     Due to the transformer models’ ability to discern connections between data, they are extremely versatile and can be used in almost any machine learning field. This is why they currently are one of the most used types of AI models.
@@ -143,7 +143,7 @@
 
                 <h3>CNN Interactive Showcase - Kernel</h3>
                 <div class="embed-container">
-                    <iframe 
+                    <iframe
                     src="https://poloclub.github.io/cnn-explainer/"
                     title="CNN Kernel Visualization"
                     loading="lazy"
@@ -154,7 +154,7 @@
                 <p class="long-paragraph">
                     By applying this pixel to pixel scan to all three monochrome layers and analyzing the relations between each scanned kernel, it can create a single image, which is a 2D feature map. A CNN consists of multiple of these CNN layers with kernels which have different properties. By analyzing these images and creating different representations of the image data via the different kernels, the CNN can attempt to “understand” what it is “looking at”.<br><br>
                     This way of viewing images is flawed, since it only takes into account small areas of an image to try to deduct what the subject of the image is. A simple analogy would be to try to deduct what a jigsaw puzzle will look like when it is finished by looking at three jigsaw pieces connected together. Depending on the size of the puzzle, this would range from very difficult to completely impossible.<br><br>
-                    This limitation leads to a severe side effect. CNN based AI will be more influenced by color rather than by shape. A CNN would classify the left image as a macaw and the right one as a cat. The two are the same image. The first image is simply more saturated. (Turc, 2025)
+                    This limitation leads to a severe side effect. CNN based AI will be more influenced by color rather than by shape. A CNN would classify the left image as a macaw and the right one as a cat. The two are the same image. The first image is simply more saturated. <a href="https://www.youtube.com/watch?v=KnCRTP11p5U">(Turc, 2025)</a>
                 </p>
 
                 <div class="double-image-gallery">
@@ -180,7 +180,7 @@
 
                 <h3>CNN Interactive Showcase - Convolution Layers</h3>
                 <div class="embed-container">
-                    <iframe 
+                    <iframe
                     src="https://adamharley.com/nn_vis/cnn/3d.html"
                     title="CNN 3D Visualization"
                     loading="lazy"
@@ -222,7 +222,7 @@
                 <h2>Comparison Table</h2>
 
                 <p>
-                    Here is a comparison chart between CNNs and ViTs based on (Papastratis, 2023)
+                    Here is a comparison chart between CNNs and ViTs based on <a href="https://medium.com/@iliaspapastratis/comparison-of-convolutional-neural-networks-and-vision-transformers-vits-a8fc5486c5be">(Papastratis, 2023)</a>
                 </p>
 
                 <div>
@@ -272,7 +272,7 @@
             <section id="text-vs-rnns" class="page">
                 <h1>Text Transformers VS RNNs</h1>
                 <p>
-                    The transformer model was created as a next step to the already existing Recurrent Neural Network (RNN). The most important feature of the transformer is its self-attention mechanism. This mechanism lets the transformer models (which process data in parallel) outperform RNN models (which process data in serial) and allows the transformer models to detect not only data, but the relationships between data as well. Processing data in parallel allows the transformer models to "analyze and remember" the entire dataset (within the context window), without having to go back to check things. RNNs, which process data in serial, cannot "remember" as much data at once and therefore do not work well with large amounts of data. (Stryker & Bergmann, n.d.)
+                    The transformer model was created as a next step to the already existing Recurrent Neural Network (RNN). The most important feature of the transformer is its self-attention mechanism. This mechanism lets the transformer models (which process data in parallel) outperform RNN models (which process data in serial) and allows the transformer models to detect not only data, but the relationships between data as well. Processing data in parallel allows the transformer models to "analyze and remember" the entire dataset (within the context window), without having to go back to check things. RNNs, which process data in serial, cannot "remember" as much data at once and therefore do not work well with large amounts of data. <a href="https://www.ibm.com/think/topics/transformer-model">(Stryker & Bergmann, n.d.)</a>
                 </p>
                 <div class="single-image-block">
                     <img
@@ -282,11 +282,11 @@
                 </div>
                 <h2>How do RNNs work?</h2>
                 <p>
-                    The idea behind RNN is straightforward: to predict the next word in a sentence, we need to know the previous words. If we pass to the RNN this sentence “London is the capital …”, then the result will be this “… capital of the United Kingdom”. (Shchegrikovich, 2024)
+                    The idea behind RNN is straightforward: to predict the next word in a sentence, we need to know the previous words. If we pass to the RNN this sentence “London is the capital …”, then the result will be this “… capital of the United Kingdom”. <a href="https://medium.com/@shchegrikovich/rnn-vs-transformers-or-how-scalability-made-possible-generative-ai-b7efce276392">(Shchegrikovich, 2024)</a>
                 </p>
                 <h3>RNN Interactive Showcase - RNN Layers</h3>
                 <div class="embed-container">
-                    <iframe 
+                    <iframe
                     src="https://joshvarty.github.io/VisualizingRNNs/"
                     title="RNN Visualization"
                     loading="lazy"
@@ -332,7 +332,7 @@
                     <i>
                         Self-attention is a mechanism that allows each position in the input sequence to consider the relevancy of, or “attend to,” all other positions in the same sequence when computing the representation of a sequence.
                     </i>
-                    (Raschka, 2024, p.55)
+                    <a href="https://www.manning.com/books/build-a-large-language-model-from-scratch">(Raschka, 2024, p.55)</a>
                 </p>
                 <p>
                     An example: If you ask an LLM to give you the 5 most important facts of a document, an older RNN based AI would have had to scan the entire document and store intermediate representations of the pieces of data inside of the document, from which it would then give you an answer. Data loss may occur this way, depending on how the AI forms these representations. Newer LLMs can simply "look" at the entire document without having to represent it as something else.
@@ -372,7 +372,7 @@
                     </div>
                     <div class="column text-right">
                         <p>
-                            Modern LLMs use multi-head attention mechanisms. These mechanisms consist of multiple instances of single-head attention mechanisms stacked on top of each other. (Raschka, 2024, p.83).
+                            Modern LLMs use multi-head attention mechanisms. These mechanisms consist of multiple instances of single-head attention mechanisms stacked on top of each other. <a href="https://www.manning.com/books/build-a-large-language-model-from-scratch">(Raschka, 2024, p.83)</a>.
                         </p>
                     </div>
                 </div>
@@ -421,11 +421,11 @@
                     <li><b>Input Layer:</b> This layer consists of neurons that take in the input data. Each neuron represents a specific feature of the input.</li>
                     <li><b>Hidden Layers:</b> One or more hidden layers sit between the input and output layers. These layers are responsible for detecting complex patterns in the data. Each neuron in a hidden layer calculates a weighted sum of its inputs, followed by applying a non-linear activation function.</li>
                     <li><b>Output Layer:</b> The output layer produces the final result of the network. The number of neurons in this layer matches the number of output classes in a classification task or the number of values in a regression task.</li>
-                    (GeeksForGeeks, 2025)
+                    <a href="https://www.geeksforgeeks.org/deep-learning/feedforward-neural-network/">(GeeksForGeeks, 2025)</a>
                 </ul>
                 <h3>Feed Forward Neural Network Interactive Showcase</h3>
                 <div class="embed-container">
-                    <iframe 
+                    <iframe
                     src="https://playground.tensorflow.org/"
                     title="Feed Forward Neural Network Interactive Showcase"
                     loading="lazy"
@@ -434,7 +434,7 @@
                 </div>
                 <h2>Feed Forward usage in RNNs</h2>
                 <p>
-                    Feedforward in RNNs is implemented within the recurrence. This means that a part of the output from the feedforward is reused as input. This is done, because RNNs cannot look at all data at the same time. (InfoDiagram, n.d.)
+                    Feedforward in RNNs is implemented within the recurrence. This means that a part of the output from the feedforward is reused as input. This is done, because RNNs cannot look at all data at the same time. <a href="https://www.geeksforgeeks.org/deep-learning/feedforward-neural-network/">(InfoDiagram, n.d.)</a>
                 </p>
                 <div class="single-image-block">
                     <img
@@ -458,19 +458,19 @@
                 <h1>How Transformers Changed AI</h1>
                 <p>
                     <i>
-                        Before transformers arrived, users had to train neural networks with large, labeled datasets that were costly and time-consuming to produce. By finding patterns between elements mathematically, transformers eliminate that need, making available the trillions of images and petabytes of text data on the web and in corporate databases. (Merritt, 2022)
+                        Before transformers arrived, users had to train neural networks with large, labeled datasets that were costly and time-consuming to produce. By finding patterns between elements mathematically, transformers eliminate that need, making available the trillions of images and petabytes of text data on the web and in corporate databases. <a href="https://blogs.nvidia.com/blog/what-is-a-transformer-model/">(Merritt, 2022)</a>
                     </i>
                 </p>
                 <h2>
                     Transformers are excellent in pattern recognition tasks
                 </h2>
-                <p>(Agarap, 2019)</p>
+                <p><a href="https://www.researchgate.net/publication/336267803_Comprehensive_Review_of_Artificial_Neural_Network_Applications_to_Pattern_Recognition">(Agarap, 2019)</a></p>
                 <h2>
                     Transformers are superior to RNNs in text to speech tasks
                 </h2>
-                <p>(Karita et al., 2019)</p>
+                <p><a href="https://arxiv.org/pdf/1909.06317">(Karita et al., 2019)</a></p>
                 <h2>
-                    Transformers have changed computing  
+                    Transformers have changed computing
                 </h2>
                 <p>
                     Thanks to them we now have:
@@ -512,10 +512,10 @@
                 <i>This website would have been impossible to make without all of the written works below. <b>Go check them out!</b></i>
 
                 <br><br>
-                
+
                 <p>
                     <a href="https://arxiv.org/abs/1706.03762">
-                    Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, L., & Polosukhin, I. (2017, 6 12). 
+                    Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, L., & Polosukhin, I. (2017, 6 12).
                     Attention Is All You Need (7). Arxiv. Retrieved 11 04, 2026, from https://arxiv.org/abs/1706.03762
                     </a>
                     <br>
@@ -529,20 +529,20 @@
                     <br><br>
 
                     <a href="https://www.geeksforgeeks.org/deep-learning/feedforward-neural-network/">
-                    GeeksForGeeks. (2025, July 26). 
+                    GeeksForGeeks. (2025, July 26).
                     Structure of a Feedforward Neural Network. GeeksforGeeks. Retrieved April 12, 2026, from https://www.geeksforgeeks.org/deep-learning/feedforward-neural-network/
                     InfoDiagram. (n.d.). RNN Schematic DIagram. InfoDIagram.
                     </a>
                     <br><br>
 
                     <a href="https://arxiv.org/pdf/1909.06317">
-                    Karita, S., Chen, N., & Hayashi, T. (2019). 
+                    Karita, S., Chen, N., & Hayashi, T. (2019).
                     A Comparative Study on Transformer vs RNN in Speech Applications. In arXiv. arXiv. Retrieved 4 13, 2026, from https://arxiv.org/pdf/1909.06317
                     </a>
                     <br><br>
 
                     <a href="https://blogs.nvidia.com/blog/what-is-a-transformer-model/">
-                    Merritt, R. (2022, March 25). 
+                    Merritt, R. (2022, March 25).
                     What Is a Transformer Model? NVIDIA Blog. Retrieved April 13, 2026, from https://blogs.nvidia.com/blog/what-is-a-transformer-model/
                     </a>
                     <br><br>
@@ -553,7 +553,7 @@
                     <br><br>
 
                     <a href="https://www.manning.com/books/build-a-large-language-model-from-scratch">
-                    Raschka, S. (2024). 
+                    Raschka, S. (2024).
                     Build a Large Language Model (From Scratch). Manning.
                     </a>
                     <br>
@@ -561,13 +561,13 @@
                     <br><br>
 
                     <a href="https://medium.com/@shchegrikovich/rnn-vs-transformers-or-how-scalability-made-possible-generative-ai-b7efce276392">
-                    Shchegrikovich, S. (2024, 1 28). 
+                    Shchegrikovich, S. (2024, 1 28).
                     RNN vs Transformers or how scalability made possible Generative AI? Retrieved 4 11, 2026, from https://medium.com/@shchegrikovich/rnn-vs-transformers-or-how-scalability-made-possible-generative-ai-b7efce276392
                     </a>
                     <br><br>
 
                     <a href="https://www.ibm.com/think/topics/transformer-model">
-                    Stryker, C., & Bergmann, D. (n.d.). 
+                    Stryker, C., & Bergmann, D. (n.d.).
                     What is a Transformer Model? IBM. Retrieved April 11, 2026, from https://www.ibm.com/think/topics/transformer-model
                     </a>
                     <br><br>
