@@ -24,10 +24,10 @@
                         <a href="#transformers">Transformers</a>
                     </li>
                     <li data-page="vision-vs-cnns">
-                        <a href="#vision-vs-cnns">ViTs VS CNNs</a>
+                        <a href="#vision-vs-cnns">ViTs и CNNs</a>
                     </li>
                     <li data-page="text-vs-rnns">
-                        <a href="#text-vs-rnns">TTs VS RNNs</a>
+                        <a href="#text-vs-rnns">TTs и RNNs</a>
                     </li>
                     <li data-page="self-attention">
                         <a href="#self-attention">Self Attention</a>
@@ -36,10 +36,10 @@
                         <a href="#feed-forward">Feed Forward</a>
                     </li>
                     <li data-page="how-changed-ai">
-                        <a href="#how-changed-ai">Impact</a>
+                        <a href="#how-changed-ai">Влияние</a>
                     </li>
                     <li data-page="about">
-                        <a href="#about">About</a>
+                        <a href="#about">Относно</a>
                     </li>
                 </ul>
             </nav>
@@ -47,34 +47,37 @@
 
         <main class="content-wrapper">
             <section id="transformers" class="page active">
-                <h1>Transformers</h1>
+                <h1>Как Transformer моделите промениха света на Изкуственият интелект</h1>
+                <h2>Какво е Transformer?</h2>
+
                 <p>
-                    When the word <strong>Transformer</strong> is mentioned in the context of Artificial Intelligence, it refers to a family of <strong>artificial neural network</strong> (ANN) architectures which are based on the multi-head attention mechanism. This mechanism gives all models that utilize it, the power to analyze large amounts of data and perform operations with all of it at the same time. Previous types of AI models, such as Recurrent Neural Networks (RNNs), could not work with such large amounts of data at the same time and more importantly, could not analyze the long range relationships between different “blocks” of data reliably. <a href="https://arxiv.org/abs/1706.03762">(Vaswani et al., 2017)</a>
+                    Когато думата „<strong>Transformer</strong>“ (Трансформър) се спомене в контекста на изкуствения интелект (ИИ / AI), обикновено става въпрос за семейство архитектури на <strong>изкуствени невронни мрежи</strong> (ИНМ / ANN), базирани на механизма multi-head attention.
+                    Този механизъм позволява на моделите да анализират големи обеми от данни и да изчисляват паралелно връзките между всички елементи в тях. Предходните поколения архитектури, като рекурентните невронни мрежи (RNN), не могат да обработват толкова много информация едновременно и се затрудняват при надеждния анализ на дългосрочните зависимости в данните <a href="https://arxiv.org/abs/1706.03762">(Vaswani et al., 2017)</a>.
                 </p>
                 <div class="single-image-block">
                     <img
                         src="img/transformers/transarch.png"
                         alt="Transformer Architecture Overview"
                     />
-                    <span><strong>Transformer Architecture</strong></span>
+                    <span><strong>Архитектура на Transformer моделите</strong></span>
                 </div>
                 <p>
-                    Transformer models were initially designed to work with text data - as the evolution of RNN based sequence models created for machine translation. Nevertheless, as of today, they have proven to be a useful tool in almost every branch of machine learning, from computer vision and speech recognition to self driving and more.
+                    Първоначално Transformer моделите са създадени за работа предимно с текстови данни, като еволюция на RNN моделите в машинния превод. Днес обаче те намират приложение в почти всяка сфера на машинното обучение – от компютърното зрение и разпознаването на реч до автономните автомобили и много други (Stryker & Bergmann, n.d.).
                 </p>
                 <p>
-                    Due to the transformer models’ ability to discern connections between data, they are extremely versatile and can be used in almost any machine learning field. This is why they currently are one of the most used types of AI models.
+                    Благодарение на способността си да улавят далечни контекстуални връзки, тези модели могат да бъдат универсални. Именно това ги прави най-широко използваните архитектури в съвременния изкуствен интелект. След разпространението на тези модели, светът на ИИ и реалният свят се промениха по следните начини:
                 </p>
                 <ul>
-                    <li>Chatbots and other smart assistants have become a part of everyday life.</li>
-                    <li>Search engines have become more intuitive to use.</li>
-                    <li>Machine translation has become more reliable.</li>
-                    <li>Science & Medicine research has been greatly accelerated.</li>
-                    <li>Many autonomous, previously unthinkable systems such as self driving vehicles, have become a reality</li>
+                    <li>Чатботове и други интелигентни асистенти станаха част от ежедневието ни</li>
+                    <li>Търсачките станаха по-интуитивни за използване</li>
+                    <li>Машинният превод стана по-надежден</li>
+                    <li>Научните и медицинските изследвания значително се ускориха</li>
+                    <li>Много автономни, доскоро немислими системи, като самоуправляващите се автомобили, се превърнаха в реалност</li>
                 </ul>
                 <div class="two-column-section">
                     <div class="column text-left">
                         <p>
-                            To put it simply, before transformers, AI was narrow, designed only for a single or a few select tasks and even then, it was sometimes unreliable. Today’s transformer based AI is general-purpose and is much more reliable than before.
+                            Казано по-просто: преди Transformer моделите изкуственият интелект беше тясно специализиран – създаден да изпълнява една или няколко конкретни задачи, при това не винаги безупречно. Днес ИИ, базиран на Transformer архитектурата, е много по-близо до технология с общо предназначение и демонстрира значително по-висока надеждност.
                         </p>
                     </div>
                     <div class="column img">
@@ -84,11 +87,11 @@
                         />
                     </div>
                 </div>
-                <h2>Interactive Transformer Architecture Visualiser</h2>
+                <h2>Интерактивна визуализация на Transformer архитектурата</h2>
                 <div class="embed-container">
-                    <iframe 
+                    <iframe
                     src="https://bbycroft.net/llm"
-                    title="Transformer Architecture Visualiser"
+                    title="Интерактивна визуализация на Transformer архитектурата"
                     loading="lazy"
                     allowfullscreen>
                     </iframe>
@@ -96,14 +99,14 @@
             </section>
 
             <section id="vision-vs-cnns" class="page">
-                <h1>Vision Transformers VS CNNs</h1>
+                <h1>Vision Transformers и Convolutional Neural Networks</h1>
 
                 <p class="centered-paragraph">
-                    Convolutional Neural Networks (CNN) were originally designed for image based tasks such as image generation and image recognition.
-                    CNNs work on the basis of mathematical convolution operations. These operations give the CNNs their vision, but this vision is fundamentally flawed.
+                    Конволюционните невронни мрежи (КНН / CNN) първоначално са създадени за задачи, свързани с изображения, като разпознаване на изображения.
+                    CNN работят на базата на математически конволюционни операции. Тези операции осигуряват „зрение“ на CNN, но това зрение е по своята същност ограничено.
                 </p>
 
-                <h2>CNN Locality Flaw</h2>
+                <h2>Локалността на CNN</h2>
 
                 <div class="two-column-section">
                     <div class="column img">
@@ -114,10 +117,10 @@
                     </div>
                     <div class="column text-right">
                         <p>
-                            Take a look at this image. You can see the entire image at the same time. As a human, as long as you have two working eyes, you can immediately discern that this is the Lorax.
+                            Вижте това изображение. Като хора, стига да имаме добро зрение, ние веднага разпознаваме обекта (в този случай, героят Лоракс), защото можем да видим цялото изображение наведнъж.
                         </p>
                         <p>
-                            <b>CNNs cannot “see” the entire image at once.</b>
+                            <b>Конволюционните невронни мрежи (CNN) обаче не могат да „видят“ цялото изображение едновременно.</b>
                         </p>
                     </div>
                 </div>
@@ -125,13 +128,14 @@
                 <div class="two-column-section">
                     <div class="column text-left">
                         <p>
-                            A CNN layer would do the following to this image:
-                            It would start scanning the image pixel by pixel, from top to bottom, left to right. Around each pixel, it would scan a predetermined area of 1 pixel for example. This way, it would only be able to “see” a 3x3 pixel grid (for example) at any given time. This 3x3 pixel grid is called a kernel.
+                            Един слой на CNN обработва изображения по следния начин:
+                            Той сканира дадено изображение пиксел по пиксел, отгоре надолу и отляво надясно. Около всеки пиксел сканира предварително определена област, например 1 пиксел. По този начин, в даден момент, той може да „вижда“ само мрежа от 3x3 пиксела (например). Тази мрежа от 3x3 пиксела се нарича ядро (kernel).
                         </p>
                     </div>
                     <div class="column img">
                         <img
                             src="img/cnn/lorax2.png"
+                            alt="Изображение на Лоракс, пикселизирано"
                             style="width: 100%; height: auto"
                         />
                     </div>
@@ -144,124 +148,121 @@
                 </div>
 
                 <p>
-                    Color images are made out of three monochrome layers: a red layer, a green layer and a blue layer.
+                    Цветните изображения се състоят от три монохромни слоя: червен слой, зелен слой и син слой.
                 </p>
 
-                <h3>CNN Interactive Showcase - Kernel</h3>
+                <h3>CNN Ядро - Интерактивна визуализация</h3>
                 <div class="embed-container">
                     <iframe
                     src="https://poloclub.github.io/cnn-explainer/"
-                    title="CNN Kernel Visualization"
+                    title="CNN Ядро - Интерактивна визуализация"
                     loading="lazy"
                     allowfullscreen>
                     </iframe>
                 </div>
 
                 <p class="long-paragraph">
-                    By applying this pixel to pixel scan to all three monochrome layers and analyzing the relations between each scanned kernel, it can create a single image, which is a 2D feature map. A CNN consists of multiple of these CNN layers with kernels which have different properties. By analyzing these images and creating different representations of the image data via the different kernels, the CNN can attempt to “understand” what it is “looking at”.<br><br>
-                    This way of viewing images is flawed, since it only takes into account small areas of an image to try to deduct what the subject of the image is. A simple analogy would be to try to deduct what a jigsaw puzzle will look like when it is finished by looking at three jigsaw pieces connected together. Depending on the size of the puzzle, this would range from very difficult to completely impossible.<br><br>
-                    This limitation leads to a severe side effect. CNN based AI will be more influenced by color rather than by shape. A CNN would classify the left image as a macaw and the right one as a cat. The two are the same image. The first image is simply more saturated. <a href="https://www.youtube.com/watch?v=KnCRTP11p5U">(Turc, 2025)</a>
+                    Чрез прилагане на това сканиране пиксел по пиксел върху всичките три монохромни слоя и анализиране на връзките между всяко сканирано ядро, CNN може да създаде изображение наречено 2D карта на характеристиките (<b>2D feature map</b>). Една CNN се състои от множество такива слоеве, чиито ядра търсят различни свойства. Чрез натрупването на тези слоеве мрежата се опитва да „сглоби“ какво точно вижда. Този локален подход обаче е ограничен. Аналогията е сякаш се опитвате да разберете какво е изобразено на голям пъзел, като гледате само три свързани парчета от него. В зависимост от сложността на изображението, това може да бъде изключително трудно или напълно невъзможно. <br><br>
+                    Това ограничение води до сериозен страничен ефект. Изкуственият интелект, базиран на CNN, ще бъде по-силно повлиян от цвета, отколкото от формата на обекта в изображението. CNN би класифицирал лявото изображение като папагал и дясното като котка. Двете изображения всъщност са почти еднакви, първото изображение просто е с по-висока цветова наситеност. <a href="https://www.youtube.com/watch?v=KnCRTP11p5U">(Turc, 2025)</a>
                 </p>
 
                 <div class="double-image-gallery">
                     <figure>
                         <img
                             src="img/cnn/catsat.png"
-                            alt="Saturated cat"
+                            alt="Котка (цветна)"
                         />
-                        <figcaption>Saturated Cat</figcaption>
+                        <figcaption>Котка (цветна)</figcaption>
                     </figure>
                     <figure>
                         <img
                             src="img/cnn/catdesat.png"
-                            alt="Desaturated cat"
+                            alt="Котка (намалена наситеност)"
                         />
-                        <figcaption>Desaturated Cat</figcaption>
+                        <figcaption>Котка (намалена наситеност)</figcaption>
                     </figure>
                 </div>
 
                 <p>
-                    <b>This limitation can only be mitigated, not fixed.</b>
+                    <b>Има техники за смекчаване на този страничен ефект, но той не може да бъде напълно отстранен.</b>
                 </p>
 
-                <h3>CNN Interactive Showcase - Convolution Layers</h3>
+                <h3>CNN Конволюционни слоеве - Интерактивна 3D визуализация</h3>
                 <div class="embed-container">
                     <iframe
                     src="https://adamharley.com/nn_vis/cnn/3d.html"
-                    title="CNN 3D Visualization"
+                    title="CNN Конволюционни слоеве - Интерактивна 3D визуализация"
                     loading="lazy"
                     allowfullscreen>
                     </iframe>
                 </div>
 
-                <h2>How would a Vision Transformer do it?</h2>
+                <h2>Как би постъпил Vision Transformer?</h2>
 
                 <p>
-                    CNNs can only analyze small areas of an image and therefore understand only the relations between adjacent pixels. Thanks to their self-attention mechanisms, Vision Transformers (ViT) can analyze an entire image at once. This means that they can understand all relations between all pixels. A transformer model would scan the image pixel by pixel (the current scanned pixel in ViTs is called the query pixel), but instead of scanning a local area (3x3, 4x4, 5x5, etc.) around each pixel, it would scan the entire image around each pixel. Basically, it would scan the entire image as many times as there are pixels in the image. And for each scanned pixel, it would map out how the scanned pixel relates to all other pixels in the image.
+                    CNN моделите могат да анализират само малки области от изображението и следователно разбират основно връзките между съседни пиксели. Благодарение на механизмите за self-attention, Vision Transformer моделите (ViT) могат да анализират цялото изображение наведнъж. Това означава, че те могат да разберат всички връзки между всички пиксели. Трансформър модел би „сканирал“ изображението пиксел по пиксел (текущият сканиран пиксел при ViT се нарича query pixel), но вместо да разглежда локална област (3x3, 4x4, 5x5 и т.н.) около всеки пиксел, той разглежда цялото изображение около всеки пиксел. По същество, той анализира цялото изображение толкова пъти, колкото пиксела има в него. Модела “картографира” връзките на всеки пиксел с всички останали пиксели в изображението.
                 </p>
 
                 <div class="single-image-block">
                     <img
                         src="img/cnn/sa_vs_conv.png"
+                        alt="Self-Attention и Конволюция"
                     />
                 </div>
 
-                <h2>Transformers can do Convolution</h2>
+                <h2>Transformer моделите могат да извършват конволюционни операции</h2>
 
                 <p>
-                    Taking the above into account - the principle between the two types of analysis is almost the same. Vision Transformers just do what CNNs do, but better, since they take more pixel relations in account. Therefore, Vision Transformer models can do anything CNNs can do. This is why there are <i>almost</i> no reasons left to use CNNs.*
+                    Като се има предвид горното - принципът между двата вида анализ е почти еднакъв. Vision Transformer моделите просто правят това, което правят CNN, но по-добре, тъй като вземат предвид повече зависимости между пикселите. Следователно Vision Transformer моделите могат да правят всичко, което могат и CNN. Ето защо почти няма причини да се използват CNN.
                 </p>
 
                 <p>
                     <i>
-                        * CNNs are still preferred for: Edge devices; Real-time systems; Smaller datasets; Lower computational cost
+                        * CNN се предпочитат за: Edge devices; Системи за работа в реално време; Работа с по-малки набори от данни; Нужда от по-ниска изчислителна сложност
                     </i>
                 </p>
 
-                <h2>Performance</h2>
+                <h2>Производителност</h2>
 
                 <p>
-                    CNNs allow parallel computation within each layer but still process data through layers sequentially. Transformers, in contrast, enable parallel processing not only within layers but also across all input elements through self-attention, making them especially efficient for sequence modeling.
-                    This is why transformer models are faster than CNN based models.
+                    CNN позволяват паралелни (parallel) изчисления в рамките на всеки слой, но все пак обработват данните последователно (serial) през слоевете. Transformer моделите, за разлика от тях, позволяват паралелна обработка не само в рамките на слоевете, но и върху всички входни елементи чрез механизма за self-attention, което ги прави особено ефективни за моделиране на последователности. Затова Transformer моделите са по-бързи от моделите, базирани на CNN.
                 </p>
 
-                <h2>Comparison Table</h2>
+                <h2>Съпоставка между CNN и Vision Transformers</h2>
 
                 <p>
-                    Here is a comparison chart between CNNs and ViTs based on <a href="https://medium.com/@iliaspapastratis/comparison-of-convolutional-neural-networks-and-vision-transformers-vits-a8fc5486c5be">(Papastratis, 2023)</a>
+                    Ето сравнителна таблица между свойствата на CNN и Vision Transformers, базирана на <a href="https://medium.com/@iliaspapastratis/comparison-of-convolutional-neural-networks-and-vision-transformers-vits-a8fc5486c5be">(Papastratis, 2023)</a>
                 </p>
 
                 <div>
                     <table>
                         <thead>
                             <tr>
-                                <th>Feature</th>
+                                <th>Свойство</th>
                                 <th>CNN</th>
-                                <th>ViT</th>
+                                <th>Vision Transformer</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Speed</td>
-                                <td>Slow (sequential layer processing)</td>
-                                <td>Fast (parallel layer processing)</td>
+                                <td>Скорост</td>
+                                <td>Бавна (последователна обработка на слоевете)</td>
+                                <td>Бърза (паралелна обработка)</td>
                             </tr>
                             <tr>
-                                <td>Analyzable Context</td>
-                                <td>Little</td>
-                                <td>Entire Input Sequence*</td>
+                                <td>Контекст</td>
+                                <td>Ограничен</td>
+                                <td>Голям</td>
                             </tr>
                             <tr>
-                                <td>Layer Complexity</td>
-                                <td>
-                                    Complex
-                                </td>
-                                <td>Simpler</td>
+                                <td>Сложност на слой</td>
+                                <td>Сложен</td>
+                                <td>По-прост</td>
                             </tr>
                             <tr>
-                                <td>Training</td>
-                                <td>Requires large amounts of labeled data to train</td>
-                                <td>Can train on unlabeled data</td>
+                                <td>Обучение</td>
+                                <td>Изискват големи количества анотирани данни за обучение</td>
+                                <td>Могат да се обучават и с неанотирани данни</td>
                             </tr>
                         </tbody>
                     </table>
@@ -269,173 +270,177 @@
 
                 <p>
                     <i>
-                        * Within context window.
+                        * В рамките на <a href="https://www.ibm.com/think/topics/context-window">контекстния прозорец</a> (context window).
                     </i>
                 </p>
 
             </section>
 
             <section id="text-vs-rnns" class="page">
-                <h1>Text Transformers VS RNNs</h1>
+                <h1>Transformers и Recurrent Neural Networks</h1>
                 <p>
-                    The transformer model was created as a next step to the already existing Recurrent Neural Network (RNN). The most important feature of the transformer is its self-attention mechanism. This mechanism lets the transformer models (which process data in parallel) outperform RNN models (which process data in serial) and allows the transformer models to detect not only data, but the relationships between data as well. Processing data in parallel allows the transformer models to "analyze and remember" the entire dataset (within the context window), without having to go back to check things. RNNs, which process data in serial, cannot "remember" as much data at once and therefore do not work well with large amounts of data. <a href="https://www.ibm.com/think/topics/transformer-model">(Stryker & Bergmann, n.d.)</a>
+                    Transformer моделът е създаден като следваща стъпка спрямо вече съществуващите RNN. Най-важната характеристика на Transformer модела е неговият self-attention механизъм. Този механизъм позволява на Transformer моделите (които обработват данните паралелно) да бъдат по-ефективни от RNN моделите (които обработват данните последователно) и им дава възможност да откриват надеждно далечни връзки между данните. Паралелната обработка позволява на Transformer моделите да „анализират и запомнят“ целия набор от данни (dataset) (в рамките на контекстния прозорец), без да е необходимо да се връщат назад, за да проверяват информация повторно. RNN, които обработват данните последователно, не могат да „запомнят“ толкова много информация наведнъж и поради това не се справят добре с големи обеми от данни. <a href="https://www.ibm.com/think/topics/transformer-model">(Stryker & Bergmann, n.d.)</a>
                 </p>
                 <div class="single-image-block">
                     <img
                         src="img/rnn/rnn_vs_trans.png"
-                        alt="RNN vs Transformer"
+                        alt="RNN и Transformer модел"
                     />
                 </div>
-                <h2>How do RNNs work?</h2>
+                <h2>Как работят RNN?</h2>
                 <p>
-                    The idea behind RNN is straightforward: to predict the next word in a sentence, we need to know the previous words. If we pass to the RNN this sentence “London is the capital …”, then the result will be this “… capital of the United Kingdom”. <a href="https://medium.com/@shchegrikovich/rnn-vs-transformers-or-how-scalability-made-possible-generative-ai-b7efce276392">(Shchegrikovich, 2024)</a>
+                    Идеята зад RNN е проста: за да предскажем следващата дума в едно изречение, трябва да знаем предишните думи. Ако подадем на RNN изречението „London is the capital …“, резултатът ще бъде „… capital of the United Kingdom“. <a href="https://medium.com/@shchegrikovich/rnn-vs-transformers-or-how-scalability-made-possible-generative-ai-b7efce276392">(Shchegrikovich, 2024)</a>
                 </p>
-                <h3>RNN Interactive Showcase - RNN Layers</h3>
+                <h3>RNN Слоеве - Интерактивна визуализация</h3>
                 <div class="embed-container">
                     <iframe
                     src="https://joshvarty.github.io/VisualizingRNNs/"
-                    title="RNN Visualization"
+                    title="RNN Слоеве - Интерактивна визуализация"
                     loading="lazy"
                     allowfullscreen>
                     </iframe>
                 </div>
                 <p>
-                    <b>Here are several flaws of the RNN architecture:</b>
+                    <b>Ето какви са недостатъците на RNN моделът:</b>
                 </p>
-                <h3>The Vanishing Gradient Problem</h3>
-                <p>The RNN model itself defines the importance of words, not their context. The model scans the sentence linearly. “London” will always be the first scanned word and therefore, the most likely to be remembered and therefore the least important word.<p>
+                <p>Важността на думите е определена от самият модел, а не от техният контекст. Моделът сканира изречението линейно. „London“ винаги ще бъде първата прочетена дума и следователно най-слабо запомнената дума. Това може да доведе до нелогично определена важност на думата в изречението, понеже връзката между думата и контекста може да бъде забравена.</p>
                 <img
                     src="img/rnn/vanishing_gradient.gif"
-                    style="width: 100%; height: auto"
+                    alt="Vanishing Gradient Image"
+                    style="width: 50%; height: auto"
                 />
                 <img
                     src="img/rnn/memorization.gif"
-                    style="width: 100%; height: auto"
+                    alt="RNN Memorization Image"
+                    style="width: 50%; height: auto"
                 />
-                <h3>Hidden State</h3>
-                <p>RNN models have a recurrent <b>hidden state</b> - this is essentially a storage container for the previous words in a sentence. This is a limited, finite container. The hidden state is the primary limitation of RNN models’ ability to understand long texts.</p>
-                <h3>Parallelism?</h3>
-                <p>Parallel computations are impossible with RNNs.</p>
-                <h2>A Problem Similar to CNNs</h2>
+                <p>RNN моделите имат recurrent hidden state — това по същество е контейнер за съхранение на предишните думи в изречението. Това е ограничен, краен контейнер. Hidden state е основното ограничение в способността на RNN моделите да разбират дълги текстове.</p>
+                <p>Паралелните изчисления са невъзможни при RNN.</p>
+                <h2>Работа с големи количества данни</h2>
                 <p>
-                    RNNs, like CNNs, cannot take into account large amounts of data. CNNs can only analyze a part of an image, similarly, RNNs can only analyze a few words or sentences at a time. Transformers can analyze the entire text at once (within context window limits).
+                    RNN, подобно на CNN, не могат да разбират далечните връзки между големи обеми от данни. CNN могат да анализират само част от изображение, по същия начин RNN могат да анализират само няколко думи или изречения наведнъж. Transformer моделите могат да анализират целия текст наведнъж (стига да имат достатъчно голям контекстов прозорец).
                 </p>
-                <h2>What do Transformers do better?</h2>
+                <h2>Как Transformer моделите са по-добри?</h2>
                 <ol>
-                    <li>In transformer models, word importance is determined by context, not by word order.</li>
-                    <li>Transformer models have no recurrent hidden state.</li>
-                    <li>Transformers were designed for parallel computations.</li>
+                    <li>В Transformer моделите важността на думите се определя от контекста, а не от реда на думите.</li>
+                    <li>Transformer моделите нямат recurrent hidden state.</li>
+                    <li>Transformer моделите са проектирани за паралелни изчисления.</li>
                 </ol>
             </section>
 
             <section id="self-attention" class="page">
                 <h1>Self Attention</h1>
-                <h2>What is self Attention?</h2>
+                <h2>Какво е Self Attention?</h2>
                 <p>
-                    As mentioned before, Transformer models owe their versatility to the <b>Multi-Head Self Attention Mechanism</b>.
+                    Както беше споменато по-рано, Transformer моделите дължат своята универсалност на <b>Multi-Head Self-Attention механизма</b>.
                 </p>
                 <p>
                     <i>
-                        Self-attention is a mechanism that allows each position in the input sequence to consider the relevancy of, or “attend to,” all other positions in the same sequence when computing the representation of a sequence.
+                        Self-Attention е механизъм, който позволява на всяка позиция във входящата последователност да прецени значимостта на всички останали позиции в същата последователност (или „да насочи вниманието си към тях“), докато изчислява представянето на дадена последователност.
                     </i>
                     <a href="https://www.manning.com/books/build-a-large-language-model-from-scratch">(Raschka, 2024, p.55)</a>
                 </p>
                 <p>
-                    An example: If you ask an LLM to give you the 5 most important facts of a document, an older RNN based AI would have had to scan the entire document and store intermediate representations of the pieces of data inside of the document, from which it would then give you an answer. Data loss may occur this way, depending on how the AI forms these representations. Newer LLMs can simply "look" at the entire document without having to represent it as something else.
-                </p>
-                <h2>How does Self Attention work?</h2>
-                <p>
-                    Self Attention uses the same principle when working with all types of data. In this example, we will discuss text data, since that is the easiest way to conceptually understand this mechanism.
+                    По-старият ИИ, базиран на RNN (рекурентни невронни мрежи), не е в състояние да разглежда връзките между всички входящи данни едновременно. По-новият ИИ, базиран на Transformer архитектурата, може да вижда връзките между всички входни данни едновременно и да определя тяхната степен на важност благодарение на Self-Attention механизма.
                 </p>
                 <p>
-                    Let’s say that we have the sentence: <b><i>Your journey starts with a single step</i></b>
+                    Пример: Ако поискате от един голям езиков модел (LLM) да ви даде петте най-важни факта от даден документ, по-старият ИИ, базиран на RNN, би трябвало да сканира целия документ и да съхрани междинни представяния на отделните данни в него, въз основа на които след това да даде отговор. По този начин може да се стигне до загуба на данни, в зависимост от това как ИИ формира тези представяния. По-новите езикови модели могат просто да „погледнат“ целия документ, без да се налага да го представят като нещо друго.
+                </p>
+                <h2>Как работи Self-Attention механизма?</h2>
+                <p>
+                    Self-Attention използва един и същ принцип при работа с всички видове данни. В този пример ще разгледаме текстови данни, тъй като това е най-лесният начин този механизъм да бъде разбран концептуално.
+                </p>
+                <p>
+                    Да кажем, че имаме изречението: <b><i>Your journey starts with a single step</i> (Твоето пътешествие започва с една-единствена стъпка)</b>
                 </p>
                 <div class="single-image-block">
-                    <img src="img/sa/ssa.png" alt="Simplified Self-Attention Diagram">
-                    <figcaption>Very Simplified Self-Attention Mechanism</figcaption>
+                    <img src="img/sa/ssa.png" alt="Силно опростен single-head attention механизъм">
+                    <figcaption>Силно опростен single-head attention механизъм</figcaption>
                 </div>
                 <p>
-                    The goal of this simplified self attention mechanism is to do the following:
-                    For each word in the input prompt, determine which other words in the text are connected contextually to that word.
+                    Целта на този опростен Self-Attention механизъм е следната:
+                    За всяка дума във входния текст се определя кои други думи в него са свързани контекстуално с нея.
                 </p>
                 <p>
-                    Each word in the input prompt has its own token embedding. This is a vector which contains values which represent the semantic meaning of words.
+                    Всяка дума от входния текст има свой собствен token embedding. Това е вектор, който съдържа стойности, представящи семантичното значение на думите.
                 </p>
                 <p>
-                    An attention weight is applied to each token embedding vector. These weights are random numbers initially. These are the numbers that the AI changes as it trains. These are the numbers that the AI uses to determine the importance of word meaning, word position, etc.
+                    Към всеки вектор за вграждане се прилага attention weight вектор. Първоначално числата в този вектор са случайни. Именно тях изкуственият интелект променя по време на своето обучение. Това са числата, които ИИ използва, за да определи важността на: значението на думата, нейната позиция в изречението, т.н.
                 </p>
                 <p>
-                    This is a <strong>very simplified single-head self attention mechanism</strong>. Standard attention mechanisms are usually more complex, with multiple heads, utilizing query, key and weight matrices, but the basic idea is the same.
+                    Това е <strong>силно опростен single-head attention механизъм</strong>. Стандартните Self-Attention механизми обикновено са по-сложни и използват матрици за заявка (query), ключ (key) и тегло (weight), но основната идея е същата.
                 </p>
                 <h2>Multi-Head Attention</h2>
                 <div class="two-column-section">
                     <div class="column img">
                         <img
                             src="img/sa/mha.png"
-                            alt="Multi-Head Attention Mechanism"
+                            alt="Multi-Head Attention механизъм"
                         />
-                        <figcaption>Multi-Head Attention Mechanism</figcaption>
+                        <figcaption>Multi-head attention механизъм</figcaption>
                     </div>
                     <div class="column text-right">
                         <p>
-                            Modern LLMs use multi-head attention mechanisms. These mechanisms consist of multiple instances of single-head attention mechanisms stacked on top of each other. <a href="https://www.manning.com/books/build-a-large-language-model-from-scratch">(Raschka, 2024, p.83)</a>.
+                            Съвременните големи езикови модели (LLM) използват multi-head attention механизми (механизми за внимание с много глави). Тези механизми се състоят от множество инстанции на механизми single-head attention, насложени един върху друг <a href="https://www.manning.com/books/build-a-large-language-model-from-scratch">(Raschka, 2024, p.83)</a>. Фигурата по-долу показва multi-head attention механизъм, който се състои от множество механизми с една глава.
                         </p>
                     </div>
                 </div>
-                <h2>Interactive Self-Attention Mechanism Visualiser</h2>
+                <h2>Интерактивна визуализация на Self-Attention механизъм</h2>
                 <div class="embed-container">
-                    <iframe 
+                    <iframe
                     src="https://artemiopadilla.github.io/lab/attention-viz/"
-                    title="Interactive Self-Attention Mechanism Visualiser"
+                    title="Интерактивна визуализация на Self-Attention механизъм"
                     loading="lazy"
                     allowfullscreen>
                     </iframe>
                 </div>
-                <h2>Why is Self-Attention better than Recurrent Layers?</h2>
+                <h2>Защо Self-Attention механизмите са по-добри от рекурентните слоеве?</h2>
                 <div class="two-column-section">
                     <div class="column text-left">
                         <p>
-                            Thanks to Self-Attention, transformers have:
+                            Благодарение на self-attention механизмите, Transformer моделите имат:
                         </p>
                         <ul>
-                            <li>Lower computational complexity per layer than RNNs and CNNs</li>
+                            <li>По-ниска изчислителна сложност <i>на слой</i> в сравнение с RNN и CNN</li>
                             <li>
-                                Better potential for parallelization than RNNs and CNNs
+                                По-добър потенциал за паралелизация в сравнение с RNN и CNN
                             </li>
                             <li>
-                                Understanding of long range dependencies between data
+                                Разбиране на далечни зависимости (long-range dependencies) между данните
                             </li>
                             <li>
-                                Faster training
+                                По-бързо обучение
                             </li>
                         </ul>
+                        <p><a href="https://arxiv.org/abs/1706.03762">(Vaswani et al., 2017)</a></p>
                     </div>
                     <div class="column img">
                         <img
                             src="img/sa/attention_showcase.gif"
                             alt="X"
                         />
-                        <figcaption>Multi-Head Attention Mechanism</figcaption>
+                        <figcaption>Multi-head attention механизъм</figcaption>
                     </div>
                 </div>
             </section>
 
             <section id="feed-forward" class="page">
-                <h1>Feed Forward</h1>
+                <h1>Feed-forward невронни мрежи</h1>
+                <h2>Feed-forward</h2>
                 <p>
-                    Feed Forward Neural Networks have a layered structure, with data passing sequentially through each layer.
+                    Feed-forward невронните мрежи имат слоеста структура, като данните преминават последователно през всеки слой.
                 </p>
                 <div class="single-image-block">
                     <img
                         src="img/ffnn/ffn.png"
-                        alt="Feed Forward Diagram 1"
+                        alt="Feed Forward Диаграма 1"
                     />
-                    <figcaption>Feed Forward Neural Network</figcaption>
+                    <figcaption>Feed-forward невронна мрежа</figcaption>
                 </div>
                 <ul>
-                    <li><b>Input Layer:</b> This layer consists of neurons that take in the input data. Each neuron represents a specific feature of the input.</li>
-                    <li><b>Hidden Layers:</b> One or more hidden layers sit between the input and output layers. These layers are responsible for detecting complex patterns in the data. Each neuron in a hidden layer calculates a weighted sum of its inputs, followed by applying a non-linear activation function.</li>
-                    <li><b>Output Layer:</b> The output layer produces the final result of the network. The number of neurons in this layer matches the number of output classes in a classification task or the number of values in a regression task.</li>
+                    <li><b>Входен слой (Input Layer):</b> Този слой се състои от неврони, които приемат входните данни. Всеки неврон представлява специфична характеристика на входните данни.</li>
+                    <li><b>Скрити слоеве (Hidden Layers):</b> Един или повече скрити слоеве са разположени между входния и изходния слой. Тези слоеве откриват сложни зависимости в данните. Всеки неврон в даден скрит слой изчислява претеглената сума от своите входове, след което прилага нелинейна функция на активация.</li>
+                    <li><b>Изходен слой (Output Layer):</b> Изходният слой генерира крайния резултат на мрежата. Броят на невроните в този слой съответства на броя на изходните класове при задача за класификация или на броя на стойностите при задача за регресия.</li>
                     <a href="https://www.geeksforgeeks.org/deep-learning/feedforward-neural-network/">(GeeksForGeeks, 2025)</a>
                 </ul>
                 <h3>Feed Forward Neural Network Interactive Showcase</h3>
@@ -447,84 +452,81 @@
                     allowfullscreen>
                     </iframe>
                 </div>
-                <h2>Feed Forward usage in RNNs</h2>
+                <h2>Използване на Feed-forward при RNN</h2>
                 <p>
-                    Feedforward in RNNs is implemented within the recurrence. This means that a part of the output from the feedforward is reused as input. This is done, because RNNs cannot look at all data at the same time. <a href="https://www.geeksforgeeks.org/deep-learning/feedforward-neural-network/">(InfoDiagram, n.d.)</a>
+                    Feed-forward при рекурентните невронни мрежи (RNN) се реализира в рамките на рекурентността. Това означава, че част от изхода на feedforward слоя се използва повторно като вход. Това се прави, тъй като RNN не могат да разглеждат всички данни едновременно. <a href="https://www.geeksforgeeks.org/deep-learning/feedforward-neural-network/">(InfoDiagram, n.d.)</a>
                 </p>
                 <div class="single-image-block">
                     <img
                         src="img/ffnn/rnnff.png"
-                        alt="Feed Forward in RNNs"
+                        alt="Feed Forward в RNN"
                     />
                 </div>
-                <h2>Feed Forward usage in Transformers</h2>
+                <h2>Използване на Feed-forward при Transformer моделите</h2>
                 <p>
-                    Transformers on the other hand use feedforward which is its own block. Data flows linearly through transformer models and the feedforward does not send anything back.
+                    Transformer моделите, от друга страна, използват feed-forward като напълно самостоятелен блок. Данните преминават линейно през този feed-forward блок.
                 </p>
                 <div class="single-image-block">
                     <img
                         src="img/ffnn/transff.png"
-                        alt="Feed Forward in Transformers"
+                        alt="Feed Forward в Transformer моделите"
                     />
                 </div>
             </section>
 
             <section id="how-changed-ai" class="page">
-                <h1>How Transformers Changed AI</h1>
+                <h1>Как Transformer моделите промениха света на Изкуственият интелект</h1>
                 <p>
                     <i>
-                        Before transformers arrived, users had to train neural networks with large, labeled datasets that were costly and time-consuming to produce. By finding patterns between elements mathematically, transformers eliminate that need, making available the trillions of images and petabytes of text data on the web and in corporate databases. <a href="https://blogs.nvidia.com/blog/what-is-a-transformer-model/">(Merritt, 2022)</a>
+                        Преди появата на Transformer моделите потребителите трябваше да обучават невронни мрежи с големи, анотирани набори от данни, чието създаване беше скъпо и отнемаше много време. Чрез математическо откриване на закономерности между елементите, Transformer моделите елиминират нуждата от етикетиране на данните. Това позволява трилионите изображения и петабайтите текстови данни в интернет да бъдат използвани за обучение. <a href="https://blogs.nvidia.com/blog/what-is-a-transformer-model/">(Merritt, 2022)</a>
                     </i>
                 </p>
                 <h2>
-                    Transformers are excellent in pattern recognition tasks
+                    Transformer моделите са отлични в задачите за разпознаване на образи
                 </h2>
                 <p><a href="https://www.researchgate.net/publication/336267803_Comprehensive_Review_of_Artificial_Neural_Network_Applications_to_Pattern_Recognition">(Agarap, 2019)</a></p>
                 <h2>
-                    Transformers are superior to RNNs in text to speech tasks
+                    Transformer моделите превъзхождат RNN в задачите за генериране на реч (text-to-speech)
                 </h2>
                 <p><a href="https://arxiv.org/pdf/1909.06317">(Karita et al., 2019)</a></p>
                 <h2>
-                    Transformers have changed computing
+                    Transformer моделите промениха компютърните технологии
                 </h2>
                 <p>
-                    Thanks to them we now have:
+                    Благодарение на тях сега имаме:
                 </p>
                 <ul>
-                    <li>Better chatbots and personal assistants powered by transformer models</li>
-                    <li>Better search engines which utilize models like BERT</li>
-                    <li>Better machine translation</li>
-                    <li>Image and sound generation</li>
-                    <li>Coding agents</li>
-                    <li>AI accelerated science research</li>
-                    <li>Better self driving vehicles</li>
+                    <li>По-добри чатботове и персонални асистенти, задвижвани от Transformer модели</li>
+                    <li>По-добри търсачки, които използват модели като BERT</li>
+                    <li>По-надежден машинен превод</li>
+                    <li>Генериране на изображения и звук</li>
+                    <li>Агенти за програмиране</li>
+                    <li>Ускорени научни изследвания чрез ИИ</li>
+                    <li>По-добри самоуправляващи се автомобили</li>
                 </ul>
                 <p>
-                    <b>Transformers made it possible for AI to understand relationships in large amounts of data all at once. <h2>Due to all of the reasons mentioned in this article, this</h2></b>
+                    <b>Transformer моделите направиха възможно ИИ да разбира връзките в големи обеми от данни едновременно. <h2>Всичко споменато в този уебсайт показва, че тези модели</h2></b>
                 </p>
-                <h1> was a true revolution for Artificial Intelligence! </h1>
+                <h1>са истинска революция за Изкуствения интелект!</h1>
             </section>
 
             <section id="about" class="page">
-                <h1>About This Project</h1>
+                <h1>Относно уебсайта</h1>
                 <p>
-                    This single-page website was created to demonstrate the
-                    impact of Transformer models on the field of Artificial
-                    Intelligence. It covers key concepts, comparisons with
-                    traditional models, and how Transformers have revolutionized
-                    various domains from Natural Language Processing to Computer
-                    Vision.
+                    Този уебсайт е създаден, за да демонстрира
+                    въздействието на Transformer моделите върху областта на Изкуствения
+                    интелект и реалният свят, да обясни накратко тяхното устройство и да сравни тези модели с други по-стари модели.
                 </p>
-                <p>This website was made with HTML, CSS, and JavaScript.</p>
+                <p>Уебсайтът е направен с HTML, CSS и JavaScript.</p>
                 <div class="single-image-block">
                     <img src="img/logos.png">
                 </div>
-                <p>The website's content was written by me - <strong>N.D.</strong> - around the start of 2026. <strong>No AI was used in any capacity for the text content written on this website.</strong> Scroll down to see all of the data sources I've used for this project.</p>
-                <p>There are multiple embedded pages within this one, which were not created by me. Scroll down to see links to those original pages.</p>
-                <p>Although I usually dislike excessive AI use in software projects, I felt like it was fitting to vibe-code the website's design (JS, CSS + HTML layout), given the topic. To do so, I used an IDE called ZED in combination with Gemini 2.5 Flash, 2.5 Pro and 3.0 Flash. </p>
+                <p>Съдържанието на уебсайта е написано от мен - <strong>N.D.</strong> - около началото на 2026 г. <strong>Не е използван ИИ в нито един етап от писането на текстовото съдържание на този уебсайт.</strong> Скролнете надолу, за да видите всички източници на данни, които съм използвал за този проект.</p>
+                <p>В рамките на тази страница са вградени множество външни страници, които не са създадени от мен. Скролнете надолу, за да видите връзки към оригиналните страници.</p>
+                <p>Въпреки че обикновено не подкрепям прекомерната употреба на ИИ в софтуерни проекти, реших, че е уместно да използвам "vibe-coding" за дизайна на уебсайта (JS, CSS + HTML оформление), предвид темата. За целта използвах vibe-coding friendly IDE, наречено ZED, в комбинация с Gemini 2.5 Flash, 2.5 Pro и 3.0 Flash. </p>
 
-                <h1> Data Sources </h1>
-                <i>This website would have been impossible to make without all of the written works below. <b>Go check them out!</b></i>
+                <h1> Източници на данни </h1>
+                <i>Без следните източници, този уебсайт нямаше да съществува. <b>Разгледайте ги!</b></i>
 
                 <br><br>
 
@@ -534,7 +536,7 @@
                     Attention Is All You Need (7). Arxiv. Retrieved 11 04, 2026, from https://arxiv.org/abs/1706.03762
                     </a>
                     <br>
-                    <b>If there should be only one source you check out, have it be this one.</b>
+                    <b>Основополагащата научна статия отговорна за създаване и популяризиране на Transformer моделите.</b>
                     <br><br>
 
                     <a href="https://www.researchgate.net/publication/336267803_Comprehensive_Review_of_Artificial_Neural_Network_Applications_to_Pattern_Recognition">
@@ -572,7 +574,7 @@
                     Build a Large Language Model (From Scratch). Manning.
                     </a>
                     <br>
-                    <i>Tried not to include books here, since they cost money, however this is IMO one of the best resources on Transformer models.</i>
+                    <i>Старах се да не включвам книги тук, тъй като те не са безплатни, но според мен това е един от най-добрите ресурси за Transformer моделите.</i>
                     <br><br>
 
                     <a href="https://medium.com/@shchegrikovich/rnn-vs-transformers-or-how-scalability-made-possible-generative-ai-b7efce276392">
@@ -592,11 +594,11 @@
                     Why are Transformers replacing CNNs? YouTube. Retrieved 11 4, 2026, from https://www.youtube.com/watch?v=KnCRTP11p5U
                     </a>
                     <br>
-                    <i>Youtube explanations are usually too simplified to be good sources, but I think that this one is really good.</i>
+                    <i>Обясненията в YouTube обикновено са твърде опростени, за да бъдат добри източници, но смятам, че това видео е много добро.</i>
                     <br><br>
 
-                    <h1> Embed Sources </h1>
-                    <i>Here are links to all of the interactive examples I've embedded in this website.</i>
+                    <h1> Източници на вграденото съдържание </h1>
+                    <i>Ето връзки към всички интерактивни примери, които съм вградил в този уебсайт.</i>
                     <br><br>
                     <a href="https://poloclub.github.io/cnn-explainer/">
                     CNN Explainer
@@ -622,10 +624,10 @@
                     TensorFlow Playground
                     </a>
                     <br><br>
-                    <h3>Huge thank you to all of the creators of the webpages I've embedded!</h3>
+                    <h3>Огромни благодарности към всички създатели на уеб страниците, вградени в този уебсайт!</h3>
                 </p>
-                <h1>Contatct</h1>
-                <p>You can contact me at: ______@xyz.abc</p>
+                <h1>Контакти</h1>
+                <p>Можете да се свържете с мен на: ______@xyz.abc</p>
             </section>
         </main>
 

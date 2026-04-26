@@ -194,6 +194,17 @@ header {
     padding-bottom: 40px; /* Add internal bottom padding to text */
 }
 
+/* Hide Scrollbars on Page Sections - Chrome, Safari, Opera */
+.page::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar on Page Sections - IE, Edge and Firefox */
+.page {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
 /* Alternating background colors for sections */
 .page:nth-child(even) {
     background-color: #fcfcfc;
