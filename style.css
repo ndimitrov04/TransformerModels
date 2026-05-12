@@ -201,8 +201,8 @@ header {
 
 /* Hide scrollbar on Page Sections - IE, Edge and Firefox */
 .page {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
 }
 
 /* Alternating background colors for sections */
@@ -253,6 +253,7 @@ header {
     margin-bottom: 4rem;
     width: 100%;
     max-width: 1100px;
+    flex-wrap: wrap;
 }
 
 .column {
@@ -441,6 +442,37 @@ iframe {
 
     .page p {
         font-size: 1rem;
+    }
+
+    .two-column-section {
+        flex-direction: column !important;
+        gap: 20px;
+    }
+
+    .column.text-left,
+    .column.text-right {
+        order: 1;
+        text-align: center;
+    }
+
+    .column.img,
+    .column.image-right {
+        order: 2;
+        width: 100%;
+    }
+
+    .triple-image-gallery,
+    .double-image-gallery {
+        flex-direction: column;
+    }
+
+    .triple-image-gallery img,
+    .double-image-gallery figure {
+        width: 100% !important;
+    }
+
+    .long-paragraph {
+        column-count: 1;
     }
 
     .embed-container {
